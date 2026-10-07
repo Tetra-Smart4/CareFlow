@@ -1,0 +1,1 @@
+Reusable appointments widgets can be added here.
