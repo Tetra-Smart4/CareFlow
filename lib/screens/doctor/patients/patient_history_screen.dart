@@ -5,7 +5,7 @@ class PatientHistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(title: const Text('Patient History')),
-    body: ListView(
+    body: ListView( 
       padding: const EdgeInsets.all(16),
       children: [
         for (final x in [

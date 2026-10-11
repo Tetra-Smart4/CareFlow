@@ -67,9 +67,9 @@ class _ForgotPasswordScreenState
     });
 
     try {
-      await Supabase.instance.client.auth
-          .resetPasswordForEmail(
+      await Supabase.instance.client.auth.resetPasswordForEmail(
         email,
+        redirectTo: 'careflow://reset-callback',
       );
 
       if (!mounted) {

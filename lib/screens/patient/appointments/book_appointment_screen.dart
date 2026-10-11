@@ -18,30 +18,31 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
   String doctorName = 'Doctor';
 
   DateTime selectedDate = DateTime.now().add(const Duration(days: 1));
-  String selectedTime = '10:00 AM';
+  String? selectedTime;
 
   bool isBooking = false;
   bool isLoadingClinic = true;
+  bool isLoadingSlots = false;
 
   String? clinicId;
   String? errorMessage;
 
-  final List<String> timeSlots = const [
-    '09:00 AM',
-    '09:30 AM',
-    '10:00 AM',
-    '10:30 AM',
-    '11:00 AM',
-    '11:30 AM',
-  ];
+  List<String> availableSlots = [];
+
+  bool _hasReadArgs = false;
 
   @override
   void initState() {
     super.initState();
+  }
 
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_hasReadArgs) {
+      _hasReadArgs = true;
       _readArguments();
-    });
+    }
   }
 
   @override
@@ -75,6 +76,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
       }
 
       _loadClinicForDoctor(receivedDoctorId);
+      _loadSlots(receivedDoctorId, selectedDate);
       return;
     }
 
@@ -82,6 +84,35 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
       isLoadingClinic = false;
       errorMessage = 'Doctor information was not received.';
     });
+  }
+
+  Future<void> _loadSlots(String docId, DateTime date) async {
+    setState(() {
+      isLoadingSlots = true;
+    });
+
+    try {
+      final slots = await appointmentService.getAvailableSlots(docId, date);
+      if (!mounted) return;
+      setState(() {
+        availableSlots = slots;
+        isLoadingSlots = false;
+        if (slots.isNotEmpty) {
+          if (selectedTime == null || !slots.contains(selectedTime)) {
+            selectedTime = slots.first;
+          }
+        } else {
+          selectedTime = null;
+        }
+      });
+    } catch (_) {
+      if (!mounted) return;
+      setState(() {
+        isLoadingSlots = false;
+        availableSlots = [];
+        selectedTime = null;
+      });
+    }
   }
 
   Future<void> _loadClinicForDoctor(String selectedDoctorId) async {
@@ -140,6 +171,11 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
       return;
     }
 
+    if (selectedTime == null) {
+      _showMessage('Please select an available time slot.');
+      return;
+    }
+
     setState(() {
       isBooking = true;
       errorMessage = null;
@@ -151,7 +187,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
         'doctor_id': doctorId,
         'clinic_id': clinicId,
         'appointment_date': _formatDateForDatabase(selectedDate),
-        'appointment_time': _formatTimeForDatabase(selectedTime),
+        'appointment_time': _formatTimeForDatabase(selectedTime!),
         'reason': reasonController.text.trim().isEmpty
             ? null
             : reasonController.text.trim(),
@@ -332,6 +368,9 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
                     setState(() {
                       selectedDate = date;
                     });
+                    if (doctorId != null) {
+                      _loadSlots(doctorId!, date);
+                    }
                   },
                 );
               },
@@ -347,21 +386,55 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
 
           const SizedBox(height: 10),
 
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: timeSlots.map((time) {
-              return ChoiceChip(
-                label: Text(time),
-                selected: selectedTime == time,
-                onSelected: (_) {
-                  setState(() {
-                    selectedTime = time;
-                  });
-                },
-              );
-            }).toList(),
-          ),
+          if (isLoadingSlots)
+            const Center(
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 20),
+                child: CircularProgressIndicator(),
+              ),
+            )
+          else if (availableSlots.isEmpty)
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.grey.shade50,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.grey.shade300),
+              ),
+              child: Column(
+                children: const [
+                  Icon(Icons.event_busy, color: Colors.grey, size: 36),
+                  SizedBox(height: 8),
+                  Text(
+                    'No Available Slots',
+                    style: TextStyle(fontWeight: FontWeight.w700),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    'All slots for this date are booked. Please pick another date.',
+                    style: TextStyle(color: Colors.grey, fontSize: 13),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            )
+          else
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: availableSlots.map((time) {
+                return ChoiceChip(
+                  label: Text(time),
+                  selected: selectedTime == time,
+                  onSelected: (_) {
+                    setState(() {
+                      selectedTime = time;
+                    });
+                  },
+                );
+              }).toList(),
+            ),
 
           const SizedBox(height: 20),
 
@@ -382,7 +455,12 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
             width: double.infinity,
             height: 52,
             child: FilledButton(
-              onPressed: isBooking || isLoadingClinic ? null : _bookAppointment,
+              onPressed: (isBooking ||
+                      isLoadingClinic ||
+                      isLoadingSlots ||
+                      selectedTime == null)
+                  ? null
+                  : _bookAppointment,
               child: isBooking
                   ? const SizedBox(
                       width: 22,
@@ -392,7 +470,11 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
                   : Text(
                       isLoadingClinic
                           ? 'Loading Clinic...'
-                          : 'Book Appointment',
+                          : isLoadingSlots
+                              ? 'Loading Slots...'
+                              : selectedTime == null && availableSlots.isEmpty
+                                  ? 'No Slots Available'
+                                  : 'Book Appointment',
                     ),
             ),
           ),

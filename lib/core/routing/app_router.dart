@@ -7,16 +7,23 @@ import 'package:flutter/material.dart';
 import 'package:careflow/screens/splash/patient_splash_screen.dart';
 import 'package:careflow/screens/splash/doctor_splash_screen.dart';
 import 'package:careflow/screens/splash/admin_splash_screen.dart';
-
+import 'package:careflow/screens/splash/staff_splash_screen.dart';
+import 'package:careflow/screens/splash/family_splash_screen.dart';
 // ============================================================
 // AUTH
 // ============================================================
 
+import 'package:careflow/screens/auth/login_screen.dart';
 import 'package:careflow/screens/auth/patient_login_screen.dart';
 import 'package:careflow/screens/auth/doctor_login_screen.dart';
 import 'package:careflow/screens/auth/admin_login_screen.dart';
+import 'package:careflow/screens/auth/staff_login_screen.dart';
+import 'package:careflow/screens/auth/family_login_screen.dart';
 import 'package:careflow/screens/auth/register_screen.dart';
+import 'package:careflow/screens/auth/patient_registration_screen.dart';
+import 'package:careflow/screens/auth/clinic_registration_screen.dart';
 import 'package:careflow/screens/auth/forgot_password_screen.dart';
+import 'package:careflow/screens/auth/reset_password_screen.dart';
 import 'package:careflow/screens/auth/role_selection_screen.dart';
 
 // ============================================================
@@ -34,11 +41,12 @@ import 'package:careflow/screens/patient/appointments/appointments_screen.dart';
 import 'package:careflow/screens/patient/appointments/appointment_details_screen.dart';
 import 'package:careflow/screens/patient/appointments/appointment_success_screen.dart';
 
-import 'package:careflow/screens/patient/queue/check_in_screen.dart';
 import 'package:careflow/screens/patient/queue/live_queue_screen.dart';
+import 'package:careflow/core/routing/auth_guard.dart';
 
 import 'package:careflow/screens/patient/medical_records/medical_records_screen.dart';
 import 'package:careflow/screens/patient/medical_records/record_details_screen.dart';
+import 'package:careflow/screens/patient/medical_history/medical_questionnaire_screen.dart';
 
 import 'package:careflow/screens/patient/prescriptions/prescriptions_screen.dart';
 import 'package:careflow/screens/patient/prescriptions/prescription_details_screen.dart';
@@ -53,6 +61,7 @@ import 'package:careflow/screens/patient/health/health_analytics_screen.dart';
 import 'package:careflow/screens/patient/health/health_metrics_screen.dart';
 import 'package:careflow/screens/patient/health/medication_adherence_screen.dart';
 import 'package:careflow/screens/patient/health/health_timeline_screen.dart';
+import 'package:careflow/screens/patient/health/patient_reports_screen.dart';
 
 import 'package:careflow/screens/patient/bills/bills_screen.dart';
 import 'package:careflow/screens/patient/bills/bill_details_screen.dart';
@@ -69,7 +78,7 @@ import 'package:careflow/screens/doctor/dashboard/doctor_dashboard.dart';
 
 import 'package:careflow/screens/doctor/appointments/doctor_appointments_screen.dart';
 import 'package:careflow/screens/doctor/appointments/appointment_details_screen.dart';
-
+import 'package:careflow/screens/doctor/appointments/doctor_availability_screen.dart';
 import 'package:careflow/screens/doctor/queue/doctor_queue_screen.dart';
 
 import 'package:careflow/screens/doctor/patients/patient_list_screen.dart';
@@ -106,51 +115,54 @@ import 'package:careflow/screens/doctor/quick_actions/quick_actions_screen.dart'
 // CLINIC / ADMIN
 // ============================================================
 
-import 'package:careflow/screens/admin/dashboard/admin_dashboard.dart';
+import 'package:careflow/screens/clinic/dashboard/admin_dashboard.dart';
 
-import 'package:careflow/screens/admin/appointments/appointment_management_screen.dart';
+import 'package:careflow/screens/clinic/appointments/appointment_management_screen.dart';
 
-import 'package:careflow/screens/admin/patients/patient_management_screen.dart';
-import 'package:careflow/screens/admin/patients/add_patient_screen.dart';
+import 'package:careflow/screens/clinic/patients/patient_management_screen.dart';
+import 'package:careflow/screens/clinic/patients/add_patient_screen.dart';
 
-import 'package:careflow/screens/admin/doctors/doctor_management_screen.dart';
-import 'package:careflow/screens/admin/doctors/add_doctor_screen.dart';
+import 'package:careflow/screens/clinic/doctors/doctor_management_screen.dart';
+import 'package:careflow/screens/clinic/doctors/add_doctor_screen.dart';
 
-import 'package:careflow/screens/admin/queue/clinic_queue_screen.dart';
-import 'package:careflow/screens/admin/queue/check_in_management_screen.dart';
+import 'package:careflow/screens/clinic/queue/clinic_queue_screen.dart';
+import 'package:careflow/screens/clinic/queue/check_in_management_screen.dart';
 
-import 'package:careflow/screens/admin/billing/billing_screen.dart';
-import 'package:careflow/screens/admin/billing/create_bill_screen.dart';
-import 'package:careflow/screens/admin/billing/payment_details_screen.dart';
+import 'package:careflow/screens/clinic/billing/billing_screen.dart';
+import 'package:careflow/screens/clinic/billing/create_bill_screen.dart';
+import 'package:careflow/screens/clinic/billing/payment_details_screen.dart';
 
-import 'package:careflow/screens/admin/records/patient_records_screen.dart';
+import 'package:careflow/screens/clinic/records/patient_records_screen.dart';
 
-import 'package:careflow/screens/admin/prescriptions/prescription_management_screen.dart';
+import 'package:careflow/screens/clinic/prescriptions/prescription_management_screen.dart';
 
-import 'package:careflow/screens/admin/follow_ups/follow_up_management_screen.dart';
+import 'package:careflow/screens/clinic/follow_ups/follow_up_management_screen.dart';
 
-import 'package:careflow/screens/admin/notifications/admin_notifications_screen.dart';
+import 'package:careflow/screens/clinic/notifications/admin_notifications_screen.dart';
 
-import 'package:careflow/screens/admin/analytics/analytics_dashboard.dart';
-import 'package:careflow/screens/admin/analytics/revenue_analytics.dart';
-import 'package:careflow/screens/admin/analytics/appointment_analytics.dart';
-import 'package:careflow/screens/admin/analytics/doctor_performance.dart';
+import 'package:careflow/screens/clinic/analytics/analytics_dashboard.dart';
+import 'package:careflow/screens/clinic/analytics/revenue_analytics.dart';
+import 'package:careflow/screens/clinic/analytics/appointment_analytics.dart';
+import 'package:careflow/screens/clinic/analytics/doctor_performance.dart';
 
-import 'package:careflow/screens/admin/reports/reports_screen.dart';
+import 'package:careflow/screens/clinic/reports/reports_screen.dart';
+import 'package:careflow/screens/clinic/reports/upload_report_screen.dart';
 
-import 'package:careflow/screens/admin/inventory/inventory_screen.dart';
+import 'package:careflow/screens/clinic/inventory/inventory_screen.dart';
 
-import 'package:careflow/screens/admin/settings/clinic_settings_screen.dart';
+import 'package:careflow/screens/clinic/settings/clinic_settings_screen.dart';
 
-import 'package:careflow/screens/admin/users/user_management_screen.dart';
+import 'package:careflow/screens/clinic/users/user_management_screen.dart';
 
-import 'package:careflow/screens/admin/calendar/clinic_calendar_screen.dart';
+import 'package:careflow/screens/clinic/calendar/clinic_calendar_screen.dart';
 
-import 'package:careflow/screens/admin/profile/admin_profile_screen.dart';
+import 'package:careflow/screens/clinic/profile/admin_profile_screen.dart';
 
-import 'package:careflow/screens/admin/quick_actions/admin_quick_actions_screen.dart';
-
-import 'package:careflow/screens/admin/more/more_menu_screen.dart';
+import 'package:careflow/screens/clinic/more/more_menu_screen.dart';
+import 'package:careflow/screens/clinic/quick_actions/admin_quick_actions_screen.dart';
+import 'package:careflow/screens/admin/platform/platform_admin_dashboard.dart';
+import 'package:careflow/screens/clinic/clinic_pending_screen.dart';
+import 'package:careflow/screens/clinic/clinic_rejected_screen.dart';
 
 // ============================================================
 // SHARED
@@ -161,6 +173,18 @@ import 'package:careflow/screens/shared/notifications/notifications_screen.dart'
 import 'package:careflow/screens/shared/patient_journey/patient_journey_screen.dart';
 import 'package:careflow/screens/shared/pdf/pdf_screen.dart';
 import 'package:careflow/screens/shared/messages/messages_screen.dart';
+
+// ============================================================
+// STAFF
+// ============================================================
+
+import 'package:careflow/screens/staff/dashboard/staff_dashboard.dart';
+
+// ============================================================
+// FAMILY
+// ============================================================
+
+import 'package:careflow/screens/family/dashboard/family_dashboard.dart';
 
 // ============================================================
 // APP ROUTER
@@ -182,9 +206,15 @@ class AppRouter {
 
     '/splash/admin': (_) => const AdminSplashScreen(),
 
+    '/splash/staff': (_) => const StaffSplashScreen(),
+
+    '/splash/family': (_) => const FamilySplashScreen(),
+
     // ==========================================================
     // ROLE-SPECIFIC LOGIN
     // ==========================================================
+
+    '/auth/login': (_) => const LoginScreen(),
 
     '/auth/patient-login': (_) => const PatientLoginScreen(),
 
@@ -192,9 +222,19 @@ class AppRouter {
 
     '/auth/admin-login': (_) => const AdminLoginScreen(),
 
+    '/auth/staff-login': (_) => const StaffLoginScreen(),
+
+    '/auth/family-login': (_) => const FamilyLoginScreen(),
+
     '/auth/register': (_) => const RegisterScreen(),
 
+    '/auth/register-patient': (_) => const PatientRegistrationScreen(),
+
+    '/auth/register-clinic': (_) => const ClinicRegistrationScreen(),
+
     '/auth/forgot': (_) => const ForgotPasswordScreen(),
+    
+    '/auth/reset-password': (_) => const ResetPasswordScreen(),
 
     '/auth/roles': (_) => const RoleSelectionScreen(),
 
@@ -202,302 +242,248 @@ class AppRouter {
     // PATIENT DASHBOARD
     // ==========================================================
 
-    '/patient/dashboard': (_) => const PatientDashboard(),
+    '/patient/dashboard': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: PatientDashboard()),
 
     // Doctors
-    '/patient/doctors/search': (_) => const DoctorSearchScreen(),
+    '/patient/doctors/search': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: DoctorSearchScreen()),
 
-    '/patient/doctors/detail': (_) => const DoctorDetailsScreen(),
+    '/patient/doctors/detail': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: DoctorDetailsScreen()),
 
-    '/patient/doctors/availability': (_) =>
-        const DoctorAvailabilityScreen(),
+    '/patient/doctors/availability': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: DoctorAvailabilityScreen()),
 
     // Appointments
-    '/patient/appointments/book': (_) =>
-        const BookAppointmentScreen(),
+    '/patient/appointments/book': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: BookAppointmentScreen()),
 
-    '/patient/appointments': (_) =>
-        const AppointmentsScreen(),
+    '/patient/appointments': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: AppointmentsScreen()),
 
-    '/patient/appointments/detail': (_) =>
-        const AppointmentDetailsScreen(),
+    '/patient/appointments/detail': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: AppointmentDetailsScreen()),
 
-    '/patient/appointments/success': (_) =>
-        const AppointmentSuccessScreen(),
+    '/patient/appointments/success': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: AppointmentSuccessScreen()),
 
     // Queue
-    '/patient/queue/checkin': (_) =>
-        const CheckInScreen(),
-
-    '/patient/queue/live': (_) =>
-        const LiveQueueScreen(),
+    '/patient/queue/live': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: LiveQueueScreen()),
 
     // Medical Records
-    '/patient/records': (_) =>
-        const MedicalRecordsScreen(),
+    '/patient/records': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: MedicalRecordsScreen()),
 
-    '/patient/records/detail': (_) =>
-        const RecordDetailsScreen(),
+    '/patient/records/detail': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: RecordDetailsScreen()),
+    '/patient/medical-history/questionnaire': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: MedicalQuestionnaireScreen()),
+
+    // Reports
+    '/patient/reports': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: PatientReportsScreen()),
+    '/patient/health/reports': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: PatientReportsScreen()),
 
     // Prescriptions
-    '/patient/prescriptions': (_) =>
-        const PrescriptionsScreen(),
+    '/patient/prescriptions': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: PrescriptionsScreen()),
 
-    '/patient/prescriptions/detail': (_) =>
-        const PrescriptionDetailsScreen(),
+    '/patient/prescriptions/detail': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: PrescriptionDetailsScreen()),
 
     // Medications
-    '/patient/medications/reminder': (_) =>
-        const MedicationReminderScreen(),
+    '/patient/medications/reminder': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: MedicationReminderScreen()),
 
-    '/patient/medications/history': (_) =>
-        const MedicationHistoryScreen(),
+    '/patient/medications/history': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: MedicationHistoryScreen()),
 
-    '/patient/medications/missed': (_) =>
-        const MissedDoseScreen(),
+    '/patient/medications/missed': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: MissedDoseScreen()),
 
     // Emergency
-    '/patient/emergency': (_) =>
-        const EmergencyContactScreen(),
+    '/patient/emergency': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: EmergencyContactScreen()),
 
     // Health
-    '/patient/health/analytics': (_) =>
-        const HealthAnalyticsScreen(),
+    '/patient/health/analytics': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: HealthAnalyticsScreen()),
 
-    '/patient/health/metrics': (_) =>
-        const HealthMetricsScreen(),
+    '/patient/health/metrics': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: HealthMetricsScreen()),
 
-    '/patient/health/adherence': (_) =>
-        const MedicationAdherenceScreen(),
+    '/patient/health/adherence': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: MedicationAdherenceScreen()),
 
-    '/patient/health/timeline': (_) =>
-        const HealthTimelineScreen(),
+    '/patient/health/timeline': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: HealthTimelineScreen()),
 
     // Bills
-    '/patient/bills': (_) =>
-        const BillsScreen(),
+    '/patient/bills': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: BillsScreen()),
 
-    '/patient/bills/detail': (_) =>
-        const BillDetailsScreen(),
+    '/patient/bills/detail': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: BillDetailsScreen()),
 
     // Follow-ups
-    '/patient/followups': (_) =>
-        const FollowUpsScreen(),
+    '/patient/followups': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: FollowUpsScreen()),
 
     // Notifications
-    '/patient/notifications': (_) =>
-        const PatientNotificationsScreen(),
+    '/patient/notifications': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: PatientNotificationsScreen()),
 
     // Profile
-    '/patient/profile': (_) =>
-        const PatientProfileScreen(),
+    '/patient/profile': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: PatientProfileScreen()),
 
     // ==========================================================
     // DOCTOR DASHBOARD
     // ==========================================================
 
-    '/doctor/dashboard': (_) =>
-        const DoctorDashboard(),
+    '/doctor/dashboard': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorDashboard()),
 
     // Appointments
-    '/doctor/appointments': (_) =>
-        const DoctorAppointmentsScreen(),
+    '/doctor/appointments': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorAppointmentsScreen()),
 
-    '/doctor/appointments/detail': (_) =>
-        const DoctorAppointmentDetailsScreen(),
+    '/doctor/appointments/detail': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorAppointmentDetailsScreen()),
+
+    '/doctor/availability': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: ManageDoctorAvailabilityScreen()),
 
     // Queue
-    '/doctor/queue': (_) =>
-        const DoctorQueueScreen(),
+    '/doctor/queue': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorQueueScreen()),
 
     // Patients
-    '/doctor/patients': (_) =>
-        const PatientListScreen(),
+    '/doctor/patients': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: PatientListScreen()),
 
-    '/doctor/patients/detail': (_) =>
-        const PatientDetailsScreen(),
+    '/doctor/patients/detail': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: PatientDetailsScreen()),
 
-    '/doctor/patients/history': (_) =>
-        const PatientHistoryScreen(),
+    '/doctor/patients/history': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: PatientHistoryScreen()),
 
     // Consultation
-    '/doctor/consultation': (_) =>
-        const ConsultationScreen(),
+    '/doctor/consultation': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: ConsultationScreen()),
 
-    '/doctor/consultation/symptoms': (_) =>
-        const SymptomsScreen(),
+    '/doctor/consultation/symptoms': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: SymptomsScreen()),
 
-    '/doctor/consultation/vitals': (_) =>
-        const VitalsScreen(),
+    '/doctor/consultation/vitals': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: VitalsScreen()),
 
-    '/doctor/consultation/diagnosis': (_) =>
-        const DiagnosisScreen(),
+    '/doctor/consultation/diagnosis': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DiagnosisScreen()),
 
-    '/doctor/consultation/prescription': (_) =>
-        const DoctorPrescriptionScreen(),
+    '/doctor/consultation/prescription': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorPrescriptionScreen()),
 
-    '/doctor/consultation/followup': (_) =>
-        const DoctorFollowUpScreen(),
+    '/doctor/consultation/followup': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorFollowUpScreen()),
 
-    '/doctor/consultation/summary': (_) =>
-        const ConsultationSummaryScreen(),
+    '/doctor/consultation/summary': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: ConsultationSummaryScreen()),
 
     // Medical History
-    '/doctor/medical-history': (_) =>
-        const DoctorMedicalHistoryScreen(),
+    '/doctor/medical-history': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorMedicalHistoryScreen()),
 
     // Prescriptions
-    '/doctor/prescriptions': (_) =>
-        const PrescriptionHistoryScreen(),
+    '/doctor/prescriptions': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: PrescriptionHistoryScreen()),
 
     // Medication Adherence
-    '/doctor/medication-adherence': (_) =>
-        const DoctorMedicationAdherenceScreen(),
+    '/doctor/medication-adherence': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorMedicationAdherenceScreen()),
 
     // Follow-ups
-    '/doctor/followups': (_) =>
-        const DoctorFollowUpsScreen(),
+    '/doctor/followups': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorFollowUpsScreen()),
 
     // Analytics
-    '/doctor/analytics': (_) =>
-        const DoctorAnalyticsScreen(),
+    '/doctor/analytics': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorAnalyticsScreen()),
 
     // Calendar
-    '/doctor/calendar': (_) =>
-        const DoctorCalendarScreen(),
+    '/doctor/calendar': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorCalendarScreen()),
 
     // Notifications
-    '/doctor/notifications': (_) =>
-        const DoctorNotificationsScreen(),
+    '/doctor/notifications': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorNotificationsScreen()),
 
     // Profile
-    '/doctor/profile': (_) =>
-        const DoctorProfileScreen(),
+    '/doctor/profile': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorProfileScreen()),
 
     // Quick Actions
-    '/doctor/quick-actions': (_) =>
-        const DoctorQuickActionsScreen(),
+    '/doctor/quick-actions': (_) => const AuthGuardWidget(allowedRoles: ['doctor'], child: DoctorQuickActionsScreen()),
 
     // ==========================================================
     // CLINIC / ADMIN DASHBOARD
     // ==========================================================
 
-    '/admin/dashboard': (_) =>
-        const AdminDashboard(),
+    '/clinic/dashboard': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: AdminDashboard()),
+
+    // Platform Admin Dashboard
+    '/admin/platform-dashboard': (_) => const AuthGuardWidget(allowedRoles: ['platform_admin'], child: PlatformAdminDashboard()),
+
+    // Clinic Approval Status
+    '/clinic/pending': (_) => const AuthGuardWidget(allowedRoles: ['clinic_pending'], child: ClinicPendingScreen()),
+    '/clinic/rejected': (_) => const AuthGuardWidget(allowedRoles: ['clinic_rejected'], child: ClinicRejectedScreen()),
 
     // Appointments
-    '/admin/appointments': (_) =>
-        const AppointmentManagementScreen(),
+    '/clinic/appointments': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: AppointmentManagementScreen()),
 
     // Patients
-    '/admin/patients': (_) =>
-        const PatientManagementScreen(),
+    '/clinic/patients': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: PatientManagementScreen()),
 
-    '/admin/patients/add': (_) =>
-        const AddPatientScreen(),
+    '/clinic/patients/add': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: AddPatientScreen()),
 
     // Doctors
-    '/admin/doctors': (_) =>
-        const DoctorManagementScreen(),
+    '/clinic/doctors': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: DoctorManagementScreen()),
 
-    '/admin/doctors/add': (_) =>
-        const AddDoctorScreen(),
+    '/clinic/doctors/add': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: AddDoctorScreen()),
 
     // Queue
-    '/admin/queue': (_) =>
-        const ClinicQueueScreen(),
+    '/clinic/queue': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: ClinicQueueScreen()),
 
-    '/admin/checkin': (_) =>
-        const CheckInManagementScreen(),
+    '/clinic/checkin': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: CheckInManagementScreen()),
 
     // Billing
-    '/admin/billing': (_) =>
-        const BillingScreen(),
+    '/clinic/billing': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: BillingScreen()),
 
-    '/admin/billing/create': (_) =>
-        const CreateBillScreen(),
+    '/clinic/billing/create': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: CreateBillScreen()),
 
-    '/admin/billing/payment': (_) =>
-        const PaymentDetailsScreen(),
+    '/clinic/billing/payment': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: PaymentDetailsScreen()),
 
     // Records
-    '/admin/records': (_) =>
-        const PatientRecordsScreen(),
+    '/clinic/records': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: PatientRecordsScreen()),
 
     // Prescriptions
-    '/admin/prescriptions': (_) =>
-        const PrescriptionManagementScreen(),
+    '/clinic/prescriptions': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: PrescriptionManagementScreen()),
 
     // Follow-ups
-    '/admin/followups': (_) =>
-        const FollowUpManagementScreen(),
+    '/clinic/followups': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: FollowUpManagementScreen()),
 
     // Notifications
-    '/admin/notifications': (_) =>
-        const AdminNotificationsScreen(),
+    '/clinic/notifications': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: AdminNotificationsScreen()),
 
     // Analytics
-    '/admin/analytics': (_) =>
-        const AnalyticsDashboard(),
+    '/clinic/analytics': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: AnalyticsDashboard()),
 
-    '/admin/revenue': (_) =>
-        const RevenueAnalytics(),
+    '/clinic/revenue': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: RevenueAnalytics()),
 
-    '/admin/analytics/appointments': (_) =>
-        const AppointmentAnalytics(),
+    '/clinic/analytics/appointments': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: AppointmentAnalytics()),
 
-    '/admin/analytics/doctors': (_) =>
-        const DoctorPerformance(),
+    '/clinic/analytics/doctors': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: DoctorPerformance()),
 
     // Reports
-    '/admin/reports': (_) =>
-        const ReportsScreen(),
+    '/clinic/reports': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: ReportsScreen()),
+    '/clinic/reports/upload': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: UploadReportScreen()),
 
     // Inventory
-    '/admin/inventory': (_) =>
-        const InventoryScreen(),
+    '/clinic/inventory': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: InventoryScreen()),
 
     // Settings
-    '/admin/settings': (_) =>
-        const ClinicSettingsScreen(),
+    '/clinic/settings': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: ClinicSettingsScreen()),
 
     // Users
-    '/admin/users': (_) =>
-        const UserManagementScreen(),
+    '/clinic/users': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: UserManagementScreen()),
 
     // Calendar
-    '/admin/calendar': (_) =>
-        const ClinicCalendarScreen(),
+    '/clinic/calendar': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: ClinicCalendarScreen()),
 
     // Profile
-    '/admin/profile': (_) =>
-        const AdminProfileScreen(),
+    '/clinic/profile': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: AdminProfileScreen()),
 
     // Quick Actions
-    '/admin/quick-actions': (_) =>
-        const AdminQuickActionsScreen(),
+    '/clinic/quick-actions': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: AdminQuickActionsScreen()),
 
     // More
-    '/admin/more': (_) =>
-        const MoreMenuScreen(),
+    '/clinic/more': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: MoreMenuScreen()),
 
     // ==========================================================
     // SHARED
     // ==========================================================
 
-    '/shared/search': (_) =>
-        const SearchScreen(),
+    '/shared/search': (_) => const AuthGuardWidget(allowedRoles: ['patient', 'doctor', 'clinic', 'admin', 'staff', 'family', 'platform_admin'], child: SearchScreen()),
 
-    '/shared/notifications': (_) =>
-        const NotificationsScreen(),
+    '/shared/notifications': (_) => const AuthGuardWidget(allowedRoles: ['patient', 'doctor', 'clinic', 'admin', 'staff', 'family', 'platform_admin'], child: NotificationsScreen()),
 
-    '/shared/journey': (_) =>
-        const PatientJourneyScreen(),
+    '/shared/journey': (_) => const AuthGuardWidget(allowedRoles: ['patient', 'doctor', 'clinic', 'admin', 'staff', 'family', 'platform_admin'], child: PatientJourneyScreen()),
 
-    '/shared/pdf': (_) =>
-        const PdfScreen(),
+    '/shared/pdf': (_) => const AuthGuardWidget(allowedRoles: ['patient', 'doctor', 'clinic', 'admin', 'staff', 'family', 'platform_admin'], child: PdfScreen()),
 
-    '/shared/messages': (_) =>
-        const MessagesScreen(),
+    '/shared/messages': (_) => const AuthGuardWidget(allowedRoles: ['patient', 'doctor', 'clinic', 'admin', 'staff', 'family', 'platform_admin'], child: MessagesScreen()),
+
+    // ==========================================================
+    // STAFF DASHBOARD
+    // ==========================================================
+
+    '/staff/dashboard': (_) => const AuthGuardWidget(allowedRoles: ['staff'], child: StaffDashboard()),
+
+    // ==========================================================
+    // FAMILY DASHBOARD
+    // ==========================================================
+
+    '/family/dashboard': (_) => const AuthGuardWidget(allowedRoles: ['family'], child: FamilyDashboard()),
   };
 }

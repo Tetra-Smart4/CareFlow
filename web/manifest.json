@@ -1,11 +1,11 @@
 {
-    "name": "careflow",
-    "short_name": "careflow",
+    "name": "CareFlow — Clinic Management System",
+    "short_name": "CareFlow",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#0F172A",
+    "theme_color": "#0F172A",
+    "description": "CareFlow: Complete patient history in one place.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

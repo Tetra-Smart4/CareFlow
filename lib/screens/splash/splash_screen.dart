@@ -1,4 +1,5 @@
 import 'dart:async';
+import '../../services/auth_service.dart';
 
 import 'package:flutter/material.dart';
 
@@ -16,14 +17,15 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    _timer = Timer(const Duration(seconds: 2), () {
-      if (!mounted) {
-        return;
-      }
+    _timer = Timer(const Duration(seconds: 2), () async {
+      if (!mounted) return;
 
+      final initialRoute = await AuthService().getInitialRoute();
+
+      if (!mounted) return;
       Navigator.pushReplacementNamed(
         context,
-        '/auth/roles',
+        initialRoute,
       );
     });
   }

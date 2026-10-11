@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'login_screen.dart';
 
 class DoctorLoginScreen extends StatelessWidget {
@@ -7,6 +6,6 @@ class DoctorLoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const LoginScreen();
+    return const LoginScreen(initialRole: LoginRole.doctor);
   }
 }

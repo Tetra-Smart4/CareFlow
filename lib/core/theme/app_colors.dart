@@ -1,102 +1,83 @@
 import 'package:flutter/material.dart';
+import 'color_tokens.dart';
 
 /// Centralized color system for CareFlow.
 ///
-/// Keep all application colors here so screens, widgets and themes
-/// use one consistent design system.
+/// Aliases to [ColorTokens] for complete brand consistency.
 class AppColors {
   AppColors._();
 
   // ---------------------------------------------------------------------------
-  // BRAND COLORS
+  // BRAND COLORS (Section 9)
   // ---------------------------------------------------------------------------
 
-  /// Primary CareFlow blue.
-  static const Color primaryBlue = Color(0xFF1976D2);
+  /// Primary CareFlow Blue (#1677E8).
+  static const Color primaryBlue = ColorTokens.primaryBlue;
 
-  /// Primary CareFlow green.
-  static const Color primaryGreen = Color(0xFF26A69A);
+  /// CareFlow Green (#35B96F).
+  static const Color primaryGreen = ColorTokens.careGreen;
 
-  /// Dark blue used for stronger headings and emphasis.
-  static const Color deepBlue = Color(0xFF0D47A1);
+  /// Dark Navy (#10245C) for headings, titles, emphasis.
+  static const Color darkNavy = ColorTokens.darkNavy;
+  static const Color deepBlue = ColorTokens.darkNavy;
 
-  /// Light blue background.
-  static const Color lightBlue = Color(0xFFEAF4FF);
+  /// Light blue background tint.
+  static const Color lightBlue = ColorTokens.lightBlue;
 
-  /// Light green background.
-  static const Color lightGreen = Color(0xFFE8F7F3);
+  /// Light green background tint.
+  static const Color lightGreen = ColorTokens.lightGreen;
 
   // ---------------------------------------------------------------------------
-  // BACKGROUND COLORS
+  // BACKGROUND & SURFACES
   // ---------------------------------------------------------------------------
 
-  static const Color background = Color(0xFFF7FAFC);
-
-  static const Color surface = Color(0xFFFFFFFF);
-
-  static const Color white = Color(0xFFFFFFFF);
+  static const Color background = ColorTokens.background;
+  static const Color surface = ColorTokens.surface;
+  static const Color white = ColorTokens.white;
+  static const Color card = ColorTokens.card;
 
   // ---------------------------------------------------------------------------
   // TEXT COLORS
   // ---------------------------------------------------------------------------
 
-  /// Main text color.
-  static const Color textPrimary = Color(0xFF172033);
-
-  /// Secondary text color.
-  static const Color textSecondary = Color(0xFF667085);
+  static const Color textPrimary = ColorTokens.textPrimary;
+  static const Color textSecondary = ColorTokens.textSecondary;
+  static const Color textMuted = ColorTokens.textMuted;
 
   // ---------------------------------------------------------------------------
   // COMPATIBILITY ALIASES
-  //
-  // Existing screens in the project use these shorter names.
-  // Keep them as aliases instead of rewriting dozens of widgets.
   // ---------------------------------------------------------------------------
 
-  /// Compatibility alias for primaryBlue.
   static const Color primary = primaryBlue;
-
-  /// Compatibility alias for primaryGreen.
   static const Color green = primaryGreen;
-
-  /// Compatibility alias for textPrimary.
   static const Color text = textPrimary;
-
-  /// Compatibility alias for textSecondary.
   static const Color muted = textSecondary;
 
   // ---------------------------------------------------------------------------
   // UI COLORS
   // ---------------------------------------------------------------------------
 
-  static const Color border = Color(0xFFE4EAF0);
-
-  static const Color divider = Color(0xFFE9EEF3);
+  static const Color border = ColorTokens.border;
+  static const Color divider = ColorTokens.divider;
 
   // ---------------------------------------------------------------------------
   // STATUS COLORS
   // ---------------------------------------------------------------------------
 
-  static const Color success = Color(0xFF2EAD7B);
-
-  static const Color warning = Color(0xFFF5A623);
-
-  static const Color error = Color(0xFFE53935);
-
+  static const Color success = ColorTokens.careGreen;
+  static const Color approved = ColorTokens.careGreen;
+  static const Color completed = ColorTokens.careGreen;
+  static const Color warning = ColorTokens.warning;
+  static const Color pending = ColorTokens.warning;
+  static const Color error = ColorTokens.error;
+  static const Color rejected = ColorTokens.error;
   static const Color notification = Color(0xFF7C5CFC);
-
   static const Color billing = Color(0xFF4F46E5);
 
   // ---------------------------------------------------------------------------
-  // BRAND GRADIENT
+  // BRAND GRADIENTS
   // ---------------------------------------------------------------------------
 
-  static const LinearGradient primaryGradient = LinearGradient(
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
-    colors: <Color>[
-      primaryBlue,
-      primaryGreen,
-    ],
-  );
+  static const LinearGradient primaryGradient = ColorTokens.primaryGradient;
+  static const LinearGradient softHeroGradient = ColorTokens.softHeroGradient;
 }

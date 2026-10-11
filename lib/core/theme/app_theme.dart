@@ -27,11 +27,15 @@ class AppTheme {
         centerTitle: false,
       ),
 
-      cardTheme: const CardThemeData(
+      cardTheme: CardThemeData(
         color: AppColors.white,
         elevation: 0,
         margin: EdgeInsets.zero,
         surfaceTintColor: Colors.transparent,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18),
+          side: const BorderSide(color: AppColors.border, width: 1),
+        ),
       ),
 
       inputDecorationTheme: InputDecorationTheme(

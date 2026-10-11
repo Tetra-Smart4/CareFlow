@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import '../../services/auth_service.dart';
 
 class PatientSplashScreen extends StatefulWidget {
   const PatientSplashScreen({super.key});
@@ -42,13 +43,16 @@ class _PatientSplashScreenState extends State<PatientSplashScreen>
 
     _animationController.forward();
 
-    // After the splash screen, open Patient Login.
-    Timer(const Duration(seconds: 3), () {
+    // Check existing session on startup and navigate appropriately
+    Timer(const Duration(milliseconds: 2000), () async {
+      if (!mounted) return;
+
+      final targetRoute = await AuthService().getInitialRoute();
       if (!mounted) return;
 
       Navigator.pushReplacementNamed(
         context,
-        '/auth/patient-login',
+        targetRoute,
       );
     });
   }
@@ -85,18 +89,32 @@ class _PatientSplashScreenState extends State<PatientSplashScreen>
                     'assets/images/careflow_logo.png',
                     width: logoWidth,
                     fit: BoxFit.contain,
+                    errorBuilder: (context, error, stackTrace) => const Icon(
+                      Icons.favorite_rounded,
+                      color: Color(0xFF1677E8),
+                      size: 64,
+                    ),
                   ),
 
-                  const SizedBox(height: 22),
+                  const SizedBox(height: 16),
 
-                  // ------------------------------------------------
-                  // TAGLINE
-                  // ------------------------------------------------
                   const Text(
-                    'Your Health Journey, Our Commitment',
+                    'CareFlow',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.w900,
+                      color: Color(0xFF10245C),
+                      letterSpacing: 0.5,
+                    ),
+                  ),
+
+                  const SizedBox(height: 8),
+
+                  const Text(
+                    'Better care begins with better connections.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 14,
                       fontWeight: FontWeight.w500,
                       color: Color(0xFF557080),
                       letterSpacing: 0.2,

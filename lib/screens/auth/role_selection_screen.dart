@@ -1,393 +1,213 @@
 import 'package:flutter/material.dart';
+import '../../core/theme/color_tokens.dart';
 
 class RoleSelectionScreen extends StatelessWidget {
-  const RoleSelectionScreen({
-    super.key,
-  });
-
-  // --------------------------------------------------------------
-  // CareFlow Theme
-  // --------------------------------------------------------------
-
-  static const Color primaryBlue = Color(0xFF1479D1);
-
-  static const Color background = Color(0xFFF7FBFF);
-
-  static const Color textDark = Color(0xFF12304A);
-
-  static const Color textGrey = Color(0xFF6B7C8D);
-
-  static const Color border = Color(0xFFD6E6F3);
+  const RoleSelectionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: background,
-
+      backgroundColor: ColorTokens.background,
       body: SafeArea(
         child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxWidth: 520,
-            ),
-
-            child: ListView(
-              padding: const EdgeInsets.fromLTRB(
-                24,
-                45,
-                24,
-                30,
-              ),
-
-              children: [
-                // ------------------------------------------------
-                // CareFlow icon
-                // ------------------------------------------------
-
-                Center(
-                  child: Container(
-                    width: 64,
-                    height: 64,
-
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFEAF6FF),
-
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-
-                    child: const Icon(
-                      Icons.favorite_rounded,
-
-                      color: primaryBlue,
-
-                      size: 34,
-                    ),
-                  ),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 36),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 460),
+              child: Card(
+                elevation: 0,
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24),
+                  side: const BorderSide(color: ColorTokens.border),
                 ),
-
-                const SizedBox(
-                  height: 22,
-                ),
-
-                // ------------------------------------------------
-                // Heading
-                // ------------------------------------------------
-
-                const Text(
-                  'Welcome to CareFlow',
-
-                  textAlign: TextAlign.center,
-
-                  style: TextStyle(
-                    fontSize: 28,
-
-                    fontWeight: FontWeight.w800,
-
-                    color: textDark,
-
-                    letterSpacing: -0.3,
-                  ),
-                ),
-
-                const SizedBox(
-                  height: 8,
-                ),
-
-                // ------------------------------------------------
-                // Subtitle
-                // ------------------------------------------------
-
-                const Text(
-                  'Choose your role to continue',
-
-                  textAlign: TextAlign.center,
-
-                  style: TextStyle(
-                    fontSize: 15,
-
-                    color: textGrey,
-
-                    height: 1.4,
-                  ),
-                ),
-
-                const SizedBox(
-                  height: 38,
-                ),
-
-                // =================================================
-                // PATIENT
-                // =================================================
-
-                _RoleCard(
-                  title: 'Patient',
-
-                  subtitle:
-                      'Access your health records, appointments and prescriptions.',
-
-                  icon: Icons.person_outline_rounded,
-
-                  onTap: () {
-                    Navigator.pushNamed(
-                      context,
-                      '/auth/patient-login',
-                    );
-                  },
-                ),
-
-                const SizedBox(
-                  height: 16,
-                ),
-
-                // =================================================
-                // DOCTOR
-                // =================================================
-
-                _RoleCard(
-                  title: 'Doctor',
-
-                  subtitle:
-                      'Manage patients, consultations, prescriptions and follow-ups.',
-
-                  icon: Icons.medical_services_outlined,
-
-                  onTap: () {
-                    Navigator.pushNamed(
-                      context,
-                      '/auth/doctor-login',
-                    );
-                  },
-                ),
-
-                const SizedBox(
-                  height: 16,
-                ),
-
-                // =================================================
-                // CLINIC
-                // =================================================
-
-                _RoleCard(
-                  title: 'Clinic',
-
-                  subtitle:
-                      'Manage appointments, patients, doctors, queue and billing.',
-
-                  icon: Icons.local_hospital_outlined,
-
-                  onTap: () {
-                    Navigator.pushNamed(
-                      context,
-                      '/auth/admin-login',
-                    );
-                  },
-                ),
-
-                const SizedBox(
-                  height: 38,
-                ),
-
-                // ------------------------------------------------
-                // Security information
-                // ------------------------------------------------
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-
-                  children: [
-                    const Icon(
-                      Icons.lock_outline_rounded,
-
-                      size: 15,
-
-                      color: textGrey,
-                    ),
-
-                    const SizedBox(
-                      width: 7,
-                    ),
-
-                    Text(
-                      'Secure healthcare access',
-
-                      style: const TextStyle(
-                        fontSize: 12,
-
-                        color: textGrey,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 36),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      // --------------------------------------------------------
+                      // BRAND LOGO & HEADER
+                      // --------------------------------------------------------
+                      Center(
+                        child: Image.asset(
+                          'assets/images/careflow_logo.png',
+                          height: 72,
+                          fit: BoxFit.contain,
+                          errorBuilder: (context, error, stackTrace) => Container(
+                            width: 68,
+                            height: 68,
+                            decoration: BoxDecoration(
+                              color: ColorTokens.lightBlue,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: const Icon(
+                              Icons.favorite_rounded,
+                              color: ColorTokens.primaryBlue,
+                              size: 36,
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ],
-                ),
+                      const SizedBox(height: 20),
 
-                const SizedBox(
-                  height: 8,
-                ),
+                      const Text(
+                        'CAREFLOW',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 26,
+                          fontWeight: FontWeight.w900,
+                          color: ColorTokens.darkNavy,
+                          letterSpacing: 1.5,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
 
-                const Text(
-                  'CareFlow keeps your healthcare experience connected and secure.',
+                      const Text(
+                        'Better care begins with better connections.',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                          color: ColorTokens.textSecondary,
+                          height: 1.4,
+                        ),
+                      ),
+                      const SizedBox(height: 36),
 
-                  textAlign: TextAlign.center,
+                      // --------------------------------------------------------
+                      // [ LOGIN ]
+                      // --------------------------------------------------------
+                      ElevatedButton(
+                        key: const Key('login_button'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: ColorTokens.primaryBlue,
+                          foregroundColor: Colors.white,
+                          elevation: 2,
+                          padding: const EdgeInsets.symmetric(vertical: 18),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                        ),
+                        onPressed: () => Navigator.pushNamed(context, '/auth/login'),
+                        child: const Text(
+                          'LOGIN',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 32),
 
-                  style: TextStyle(
-                    fontSize: 11,
+                      // --------------------------------------------------------
+                      // DIVIDER: New to CareFlow?
+                      // --------------------------------------------------------
+                      Row(
+                        children: [
+                          const Expanded(child: Divider(color: ColorTokens.border)),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 14),
+                            child: Text(
+                              'New to CareFlow?',
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: ColorTokens.textMuted.withValues(alpha: 0.9),
+                              ),
+                            ),
+                          ),
+                          const Expanded(child: Divider(color: ColorTokens.border)),
+                        ],
+                      ),
+                      const SizedBox(height: 24),
 
-                    color: textGrey,
+                      // --------------------------------------------------------
+                      // [ Register as Patient ]
+                      // --------------------------------------------------------
+                      OutlinedButton.icon(
+                        key: const Key('register_patient_button'),
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: ColorTokens.primaryBlue,
+                          side: const BorderSide(color: ColorTokens.primaryBlue, width: 1.5),
+                          backgroundColor: ColorTokens.lightBlue.withValues(alpha: 0.3),
+                          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                        ),
+                        onPressed: () => Navigator.pushNamed(context, '/auth/register-patient'),
+                        icon: const Icon(Icons.person_outline_rounded, size: 22),
+                        label: const Text(
+                          'Register as Patient',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 14),
 
-                    height: 1.4,
+                      // --------------------------------------------------------
+                      // [ Register as Clinic ]
+                      // --------------------------------------------------------
+                      OutlinedButton.icon(
+                        key: const Key('register_clinic_button'),
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: ColorTokens.careGreen,
+                          side: const BorderSide(color: ColorTokens.careGreen, width: 1.5),
+                          backgroundColor: ColorTokens.careGreen.withValues(alpha: 0.08),
+                          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                        ),
+                        onPressed: () => Navigator.pushNamed(context, '/auth/register-clinic'),
+                        icon: const Icon(Icons.local_hospital_outlined, size: 22),
+                        label: const Text(
+                          'Register as Clinic',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 28),
+
+                      // --------------------------------------------------------
+                      // NOTE & SECURITY BADGE
+                      // --------------------------------------------------------
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                        decoration: BoxDecoration(
+                          color: ColorTokens.background,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: ColorTokens.border),
+                        ),
+                        child: const Row(
+                          children: [
+                            Icon(Icons.shield_outlined, size: 16, color: ColorTokens.textMuted),
+                            SizedBox(width: 8),
+                            Expanded(
+                              child: Text(
+                                'Doctor accounts are provisioned by registered clinics.',
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  color: ColorTokens.textMuted,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-// ==================================================================
-// ROLE CARD
-// ==================================================================
-
-class _RoleCard extends StatelessWidget {
-  const _RoleCard({
-    required this.title,
-    required this.subtitle,
-    required this.icon,
-    required this.onTap,
-  });
-
-  final String title;
-
-  final String subtitle;
-
-  final IconData icon;
-
-  final VoidCallback onTap;
-
-  static const Color primaryBlue = Color(0xFF1479D1);
-
-  static const Color textDark = Color(0xFF12304A);
-
-  static const Color textGrey = Color(0xFF6B7C8D);
-
-  static const Color border = Color(0xFFD6E6F3);
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: Colors.white,
-
-      borderRadius: BorderRadius.circular(18),
-
-      child: InkWell(
-        onTap: onTap,
-
-        borderRadius: BorderRadius.circular(18),
-
-        child: Container(
-          padding: const EdgeInsets.all(18),
-
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(18),
-
-            border: Border.all(
-              color: border,
-
-              width: 1,
-            ),
-          ),
-
-          child: Row(
-            children: [
-              // --------------------------------------------------
-              // Icon
-              // --------------------------------------------------
-
-              Container(
-                width: 58,
-                height: 58,
-
-                decoration: BoxDecoration(
-                  color: const Color(0xFFEAF6FF),
-
-                  borderRadius: BorderRadius.circular(16),
-                ),
-
-                child: Icon(
-                  icon,
-
-                  color: primaryBlue,
-
-                  size: 29,
-                ),
-              ),
-
-              const SizedBox(
-                width: 16,
-              ),
-
-              // --------------------------------------------------
-              // Text
-              // --------------------------------------------------
-
-              Expanded(
-                child: Column(
-                  crossAxisAlignment:
-                      CrossAxisAlignment.start,
-
-                  children: [
-                    Text(
-                      title,
-
-                      style: const TextStyle(
-                        fontSize: 17,
-
-                        fontWeight: FontWeight.w700,
-
-                        color: textDark,
-                      ),
-                    ),
-
-                    const SizedBox(
-                      height: 5,
-                    ),
-
-                    Text(
-                      subtitle,
-
-                      maxLines: 2,
-
-                      overflow: TextOverflow.ellipsis,
-
-                      style: const TextStyle(
-                        fontSize: 12,
-
-                        color: textGrey,
-
-                        height: 1.4,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              const SizedBox(
-                width: 10,
-              ),
-
-              // --------------------------------------------------
-              // Arrow
-              // --------------------------------------------------
-
-              const Icon(
-                Icons.arrow_forward_ios_rounded,
-
-                size: 17,
-
-                color: textGrey,
-              ),
-            ],
           ),
         ),
       ),
