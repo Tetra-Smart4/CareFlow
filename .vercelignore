@@ -1,0 +1,52 @@
+# CareFlow Vercel Ignore Rules
+# Important: Root slashes (/) are required so root source directories (e.g. /web)
+# do not match nested build output directories (e.g. /build/web).
+
+# Ignore version control and IDE files
+/.git
+/.github
+/.vscode
+/.idea
+
+# Ignore development and temporary directories
+/.dart_tool
+/scratch
+/tooling
+/docs
+
+# Ignore Supabase backend files (schema, migrations, functions)
+/supabase
+
+# Ignore platform-specific source code
+/android
+/ios
+/linux
+/macos
+/windows
+
+# Ignore Flutter source, test, and web source directories
+/lib
+/test
+/web
+
+# Ignore root assets (compiled into build/web/assets)
+/assets
+
+# Ignore build tools, scripts, and documentation
+/*.dart
+/*.py
+/*.md
+/*.yaml
+/*.lock
+/.flutter-plugins-dependencies
+/.metadata
+
+# Ignore environment files
+/.env*
+
+# Ignore all non-web build artifacts
+/build/*
+!/build/web
+
+# Explicitly ensure configuration is kept
+!/vercel.json
