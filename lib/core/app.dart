@@ -45,6 +45,22 @@ class _CareFlowAppState extends State<CareFlowApp> {
               _navigatorKey.currentState?.pushNamed('/auth/reset-password');
               break;
             case AuthChangeEvent.signedIn:
+              final authUser = data.session?.user;
+              if (authUser != null) {
+                Supabase.instance.client
+                    .from('profiles')
+                    .select('role, status')
+                    .eq('id', authUser.id)
+                    .maybeSingle()
+                    .then((prof) {
+                  if (prof != null &&
+                      prof['role'] == 'doctor' &&
+                      (prof['status'] == 'invited' || prof['status'] == 'pending_activation')) {
+                    _navigatorKey.currentState?.pushNamed('/auth/reset-password');
+                  }
+                }).catchError((_) {});
+              }
+              break;
             case AuthChangeEvent.initialSession:
             case AuthChangeEvent.tokenRefreshed:
             case AuthChangeEvent.userUpdated:

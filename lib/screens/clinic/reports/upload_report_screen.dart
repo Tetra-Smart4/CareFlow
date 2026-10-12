@@ -30,7 +30,7 @@ class _UploadReportScreenState extends State<UploadReportScreen> {
   final _titleController = TextEditingController();
   final _descriptionController = TextEditingController();
 
-  String _selectedReportType = 'Lab Report';
+  String _selectedReportType = 'Laboratory Report';
   DateTime _selectedDate = DateTime.now();
 
   String? _selectedPatientId;
@@ -43,14 +43,14 @@ class _UploadReportScreenState extends State<UploadReportScreen> {
   String? _errorMessage;
 
   final List<String> _reportTypes = const [
-    'Lab Report',
-    'Radiology / X-Ray',
-    'Blood Test',
-    'Pathology',
-    'Diagnostic Scan',
-    'Discharge Summary',
-    'Clinical Note',
-    'Other',
+    'Laboratory Report',
+    'Imaging Report (X-Ray / MRI / CT / Ultrasound)',
+    'Diagnostic Test Report',
+    'Consultation Summary',
+    'Referral Letter',
+    'Vaccination Record',
+    'Pathology Report',
+    'Clinical Note / Other',
   ];
 
   @override

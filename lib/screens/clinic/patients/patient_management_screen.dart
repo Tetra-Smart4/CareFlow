@@ -40,47 +40,65 @@ class _PatientManagementScreenState extends State<PatientManagementScreen> {
       final user = Supabase.instance.client.auth.currentUser;
       final clinicId = await _clinicRepo.getCurrentUserClinicId() ?? user?.id;
 
-      // 1. Find patient IDs from clinic appointments
-      List<String> patientIds = [];
-      if (clinicId != null) {
-        final appts = await Supabase.instance.client
-            .from('careflow_appointments')
-            .select('patient_id')
-            .eq('clinic_id', clinicId);
-
-        patientIds = appts
-            .map((e) => e['patient_id']?.toString())
-            .whereType<String>()
-            .toSet()
-            .toList();
+      if (clinicId == null) {
+        setState(() {
+          _patients = [];
+          _loading = false;
+        });
+        return;
       }
 
-      List<dynamic> profilesData = [];
+      // 1. Try secure RPC careflow_get_clinic_patients
+      try {
+        final rpcData = await Supabase.instance.client.rpc(
+          'careflow_get_clinic_patients',
+          params: {'p_clinic_id': clinicId},
+        );
+
+        if (rpcData is List) {
+          if (mounted) {
+            setState(() {
+              _patients = List<Map<String, dynamic>>.from(rpcData);
+              _loading = false;
+            });
+          }
+          return;
+        }
+      } catch (_) {}
+
+      // 2. Fallback: strictly query appointments belonging to THIS clinic
+      final appts = await Supabase.instance.client
+          .from('careflow_appointments')
+          .select('patient_id')
+          .eq('clinic_id', clinicId);
+
+      final patientIds = appts
+          .map((e) => e['patient_id']?.toString())
+          .whereType<String>()
+          .toSet()
+          .toList();
+
+      List<Map<String, dynamic>> profilesData = [];
       if (patientIds.isNotEmpty) {
-        profilesData = await Supabase.instance.client
+        final raw = await Supabase.instance.client
             .from('profiles')
             .select()
             .inFilter('id', patientIds);
-      } else {
-        // Fallback: list patients if none booked yet or broad query
-        profilesData = await Supabase.instance.client
-            .from('profiles')
-            .select()
-            .eq('role', 'patient')
-            .limit(20);
+
+        profilesData = List<Map<String, dynamic>>.from(raw);
       }
 
       if (mounted) {
         setState(() {
-          _patients = List<Map<String, dynamic>>.from(profilesData);
+          _patients = profilesData;
           _loading = false;
         });
       }
-    } catch (_) {
+    } catch (e) {
       if (mounted) {
         setState(() {
           _loading = false;
-          _error = 'Unable to load clinic patients.';
+          _error = 'Unable to load clinic patients: $e';
         });
       }
     }
@@ -92,7 +110,8 @@ class _PatientManagementScreenState extends State<PatientManagementScreen> {
     return _patients.where((p) {
       final name = (p['full_name'] ?? '').toString().toLowerCase();
       final phone = (p['phone'] ?? '').toString().toLowerCase();
-      return name.contains(q) || phone.contains(q);
+      final email = (p['email'] ?? '').toString().toLowerCase();
+      return name.contains(q) || phone.contains(q) || email.contains(q);
     }).toList();
   }
 
@@ -103,11 +122,12 @@ class _PatientManagementScreenState extends State<PatientManagementScreen> {
     return Scaffold(
       backgroundColor: ColorTokens.background,
       appBar: AppBar(
-        title: const Text('Patient Directory'),
+        title: const Text('Clinic Patient Directory'),
         actions: [
           IconButton(
             onPressed: _loading ? null : _loadPatients,
             icon: const Icon(Icons.refresh_rounded),
+            tooltip: 'Refresh',
           ),
         ],
       ),
@@ -121,7 +141,8 @@ class _PatientManagementScreenState extends State<PatientManagementScreen> {
               onChanged: (_) => setState(() {}),
               decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.search_rounded),
-                hintText: 'Search by patient name or phone',
+                hintText: 'Search patients by name, phone, or email',
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
                 suffixIcon: _searchController.text.isNotEmpty
                     ? IconButton(
                         icon: const Icon(Icons.clear_rounded),
@@ -159,92 +180,104 @@ class _PatientManagementScreenState extends State<PatientManagementScreen> {
             else if (filtered.isEmpty)
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 40),
+                  padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 24),
                   child: Column(
-                    children: const [
-                      Icon(Icons.people_outline_rounded, size: 52, color: ColorTokens.muted),
-                      SizedBox(height: 12),
-                      Text(
-                        'No patients found',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          color: ColorTokens.navy,
-                        ),
+                    children: [
+                      const Icon(Icons.people_outline, size: 54, color: ColorTokens.muted),
+                      const SizedBox(height: 16),
+                      const Text(
+                        'No Clinic Patients Found',
+                        style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16, color: ColorTokens.darkNavy),
                       ),
-                      SizedBox(height: 4),
-                      Text(
-                        'Patients who register or book appointments at your clinic will appear here.',
-                        style: TextStyle(color: ColorTokens.muted),
+                      const SizedBox(height: 8),
+                      const Text(
+                        'This directory only displays patients who have scheduled appointments with doctors at this clinic.',
                         textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 13, color: ColorTokens.muted),
                       ),
                     ],
                   ),
                 ),
               )
-            else ...[
-              Text(
-                '${filtered.length} Registered Patient${filtered.length == 1 ? '' : 's'}',
-                style: const TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w800,
-                  color: ColorTokens.navy,
-                ),
-              ),
-              const SizedBox(height: 12),
-              ...filtered.map((patient) {
-                final name = patient['full_name'] ?? 'Patient';
-                final phone = patient['phone']?.toString() ?? 'No phone';
-                final gender = patient['gender']?.toString() ?? '';
-                final age = patient['age'];
-
-                final details = [
-                  if (gender.isNotEmpty) gender,
-                  if (age != null) 'Age $age',
-                  phone,
-                ].join(' • ');
+            else
+              ...filtered.map((p) {
+                final name = p['full_name'] ?? 'Patient';
+                final phone = p['phone'] ?? '';
+                final email = p['email'] ?? '';
+                final gender = p['gender'] ?? '';
+                final age = p['age'];
+                final apptCount = p['total_appointments'];
+                final lastDate = p['last_appointment_date'];
 
                 return Card(
-                  margin: const EdgeInsets.only(bottom: 10),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: ColorTokens.lightBlue,
-                      child: Text(
-                        _initials(name),
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w800,
-                          color: ColorTokens.primaryBlue,
+                  margin: const EdgeInsets.only(bottom: 12),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    side: const BorderSide(color: ColorTokens.border),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CircleAvatar(
+                          radius: 24,
+                          backgroundColor: ColorTokens.lightGreen,
+                          child: Text(
+                            name.isNotEmpty ? name[0].toUpperCase() : 'P',
+                            style: const TextStyle(
+                              color: ColorTokens.careGreen,
+                              fontWeight: FontWeight.w800,
+                              fontSize: 16,
+                            ),
+                          ),
                         ),
-                      ),
+                        const SizedBox(width: 14),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                name,
+                                style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: ColorTokens.darkNavy),
+                              ),
+                              const SizedBox(height: 4),
+                              if (phone.isNotEmpty)
+                                Text('Phone: $phone', style: const TextStyle(fontSize: 12, color: ColorTokens.textSecondary)),
+                              if (email.isNotEmpty)
+                                Text('Email: $email', style: const TextStyle(fontSize: 12, color: ColorTokens.textSecondary)),
+                              if (gender.isNotEmpty || age != null) ...[
+                                const SizedBox(height: 2),
+                                Text(
+                                  [if (gender.isNotEmpty) gender, if (age != null) '$age yrs'].join(', '),
+                                  style: const TextStyle(fontSize: 11, color: ColorTokens.textMuted),
+                                ),
+                              ],
+                              if (apptCount != null || lastDate != null) ...[
+                                const SizedBox(height: 6),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                                  decoration: BoxDecoration(
+                                    color: ColorTokens.lightBlue,
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Text(
+                                    '${apptCount ?? 1} Appointments • Last: ${lastDate ?? 'Recent'}',
+                                    style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: ColorTokens.primaryBlue),
+                                  ),
+                                ),
+                              ],
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                    title: Text(
-                      name,
-                      style: const TextStyle(fontWeight: FontWeight.w800, color: ColorTokens.navy),
-                    ),
-                    subtitle: Text(details, style: const TextStyle(fontSize: 13, color: ColorTokens.muted)),
-                    trailing: const Icon(Icons.chevron_right, color: ColorTokens.muted),
-                    onTap: () {
-                      Navigator.pushNamed(
-                        context,
-                        '/doctor/patients/details',
-                        arguments: {'patient': patient, 'patientId': patient['id']},
-                      );
-                    },
                   ),
                 );
               }),
-            ],
           ],
         ),
       ),
     );
-  }
-
-  String _initials(String name) {
-    final parts = name.trim().split(RegExp(r'\s+'));
-    if (parts.length == 1) {
-      return parts.first.substring(0, parts.first.length >= 2 ? 2 : 1).toUpperCase();
-    }
-    return '${parts.first[0]}${parts.last[0]}'.toUpperCase();
   }
 }

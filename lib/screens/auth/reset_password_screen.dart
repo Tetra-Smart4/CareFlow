@@ -36,12 +36,30 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
         UserAttributes(password: _passwordController.text),
       );
 
+      // If user is a doctor activating their account, update status to active
+      final currentUser = Supabase.instance.client.auth.currentUser;
+      if (currentUser != null) {
+        try {
+          final profileData = await Supabase.instance.client
+              .from('profiles')
+              .select('role, status')
+              .eq('id', currentUser.id)
+              .maybeSingle();
+
+          if (profileData != null && profileData['role'] == 'doctor') {
+            await Supabase.instance.client.rpc('careflow_activate_doctor_account', params: {
+              'p_doctor_id': currentUser.id,
+            });
+          }
+        } catch (_) {}
+      }
+
       if (!mounted) return;
       setState(() => _success = true);
       
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: const Text('Password updated successfully.'),
+        const SnackBar(
+          content: Text('Password updated successfully. Account activated.'),
           backgroundColor: ColorTokens.careGreen,
         ),
       );
@@ -78,7 +96,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   const Icon(Icons.check_circle_outline, color: ColorTokens.careGreen, size: 80),
                   const SizedBox(height: 24),
                   const Text(
-                    'Your password has been updated successfully.',
+                    'Your password has been set up successfully.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 18,
@@ -86,12 +104,36 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                       color: ColorTokens.darkNavy,
                     ),
                   ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'Your CareFlow account is now active and ready to use.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 14, color: ColorTokens.textSecondary),
+                  ),
                   const SizedBox(height: 32),
                   ElevatedButton(
-                    onPressed: () {
-                      // Navigate back to login
-                      Navigator.pushNamedAndRemoveUntil(
-                        context,
+                    onPressed: () async {
+                      final nav = Navigator.of(context);
+                      try {
+                        final authUser = Supabase.instance.client.auth.currentUser;
+                        if (authUser != null) {
+                          final prof = await Supabase.instance.client
+                              .from('profiles')
+                              .select('role')
+                              .eq('id', authUser.id)
+                              .maybeSingle();
+
+                          if (prof != null && prof['role'] == 'doctor') {
+                            nav.pushNamedAndRemoveUntil(
+                              '/doctor/dashboard',
+                              (route) => false,
+                            );
+                            return;
+                          }
+                        }
+                      } catch (_) {}
+
+                      nav.pushNamedAndRemoveUntil(
                         '/auth/login',
                         (route) => false,
                       );
@@ -102,7 +144,18 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                     ),
-                    child: const Text('Back to Sign In', style: TextStyle(fontWeight: FontWeight.w700)),
+                    child: const Text('Continue to Dashboard', style: TextStyle(fontWeight: FontWeight.w700)),
+                  ),
+                  const SizedBox(height: 12),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        '/auth/login',
+                        (route) => false,
+                      );
+                    },
+                    child: const Text('Back to Sign In'),
                   ),
                 ],
               ),

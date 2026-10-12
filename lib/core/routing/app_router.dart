@@ -120,7 +120,7 @@ import 'package:careflow/screens/clinic/dashboard/admin_dashboard.dart';
 import 'package:careflow/screens/clinic/appointments/appointment_management_screen.dart';
 
 import 'package:careflow/screens/clinic/patients/patient_management_screen.dart';
-import 'package:careflow/screens/clinic/patients/add_patient_screen.dart';
+import 'package:careflow/screens/clinic/patients/find_patient_walkin_screen.dart';
 
 import 'package:careflow/screens/clinic/doctors/doctor_management_screen.dart';
 import 'package:careflow/screens/clinic/doctors/add_doctor_screen.dart';
@@ -394,8 +394,8 @@ class AppRouter {
 
     // Patients
     '/clinic/patients': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: PatientManagementScreen()),
-
-    '/clinic/patients/add': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: AddPatientScreen()),
+    '/clinic/patients/find': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: FindPatientWalkInScreen()),
+    '/clinic/patients/add': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: FindPatientWalkInScreen()),
 
     // Doctors
     '/clinic/doctors': (_) => const AuthGuardWidget(allowedRoles: ['clinic'], child: DoctorManagementScreen()),

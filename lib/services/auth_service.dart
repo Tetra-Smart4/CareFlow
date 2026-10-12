@@ -354,6 +354,14 @@ class AuthService {
 
       // Check for Doctor
       if (role == 'doctor') {
+        if (profile.status.toLowerCase() == 'invited' || profile.status.toLowerCase() == 'pending_activation') {
+          return AuthResult(
+            success: true,
+            role: 'doctor',
+            destinationRoute: '/auth/reset-password',
+            profile: profile,
+          );
+        }
         return AuthResult(
           success: true,
           role: 'doctor',
@@ -491,6 +499,9 @@ class AuthService {
       }
 
       if (role == 'doctor') {
+        if (profile.status.toLowerCase() == 'invited' || profile.status.toLowerCase() == 'pending_activation') {
+          return '/auth/reset-password';
+        }
         return '/doctor/dashboard';
       }
 

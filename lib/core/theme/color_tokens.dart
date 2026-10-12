@@ -36,6 +36,9 @@ class ColorTokens {
   /// Warning: Amber/orange for pending, waiting, attention required.
   static const Color warning = Color(0xFFF59E0B);
 
+  /// Light Warning: Soft amber background tint for warning badges and banners.
+  static const Color lightWarning = Color(0xFFFEF3C7);
+
   // ---------------------------------------------------------------------------
   // NEUTRAL & SUPPORTING PALETTE
   // ---------------------------------------------------------------------------

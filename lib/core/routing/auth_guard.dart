@@ -47,6 +47,14 @@ class _AuthGuardWidgetState extends State<AuthGuardWidget> {
     if (role == 'platform_admin' || (role == 'admin' && profile.clinicName == null && (user.email ?? '').contains('admin'))) {
       effectiveRole = 'platform_admin';
     } 
+    // Determine doctor status
+    else if (role == 'doctor') {
+      if (profile.status.toLowerCase() == 'invited' || profile.status.toLowerCase() == 'pending_activation') {
+        _redirect('/auth/reset-password');
+        return;
+      }
+      effectiveRole = 'doctor';
+    }
     // Determine clinic status
     else if (role == 'clinic' || role == 'admin') {
       final status = await authService.getClinicApprovalStatus(user.id);
