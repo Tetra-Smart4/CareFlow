@@ -1,0 +1,356 @@
+%PDF-1.4
+%‚„œ”
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Pharmaceuticals & Medical Devices Bureau of India
+</title>
+     
+<link href="main.css" rel="stylesheet" /><link rel="shortcut icon" href="images/PMBIFavi.png" /><meta content="Pharmaceuticals &amp; Medical Devices Bureau of India, Government of India" charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/responsive.css" /><link rel="stylesheet" href="css/bootstrap.min.css" /><link href="css/bootstrapverticaltabs.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('SampleAppDate', [])
+        app.controller('SampleControlDate', function ($scope) {
+            $scope.cdate = new Date();
+        });
+        </script>
+    <style type="text/css">
+        .blink_me {
+            color:red;
+            animation: blinker 3s linear infinite;
+            }
+
+            @keyframes blinker {
+                70% {
+                    opacity: 0;
+                   
+                }
+            }
+            </style>
+</head>
+    <body data-ng-app="SampleAppDate" data-ng-controller="SampleControlDate">
+        <form method="post" action="./ProductList.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTQ3NDQzMDk3MQ9kFgJmD2QWAgIDD2QWAgIBD2QWAgIJDw8WAh4EVGV4dAUEMjQzOWRkZEiUzhdnbY4sDVRpplVJmJlWqZ2ZTfSczehH9QxMD4bh" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=3VRnW-1xKsBlaOh_A1BCBysZQfKKYpv_XkuKqd9ykxvcjTLploqRYOHFsdQfjwt6ZhIUPgLY5vnPyCF7SW0wwF6VjmDwjtB7O-Dpb1rx9LY1&amp;t=638901734248157332" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="754E3D9C" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAU+PZDDrwY9sX95fXJnszjyyt4UjSul2XaF7p6cUBls1Ypc+W/xlMx5C9nXoNS4DXWR4LjkR5IsL9YRVdq8PhvwtQk1kjZvzZ6i3pNtldB1mg/yL0CaWG8du/fHygUhuvWA13DQhH3Dopa7nkGngL6G" />
+</div>
+            <!--header Start-->
+            <div class="top-wrp">
+                <div class="container">
+                    <div class="container">
+                        <div class="row">
+                            
+                            <div class="col-md-11">
+                                <div class="info">
+                                    <ul>
+                                        <li><a href="#" style="font-size:12px">Last updated: <b>{{cdate | date:'dd.MM.yyyy'}}</b></a></li>
+                                        
+                                        <li><img alt="mi" src="images/mail-icon.png"/> complaints[at]janaushadhi[dot]gov[dot]in</li>
+                                        <li><a href="#"><img alt="cl" src="images/call-us.png" /> Toll-Free 1800-180-8080</a></li>
+                                         
+                                        <li><a href="https://www.youtube.com/channel/UCyC_ZjR9g6or1e3TIFr0sPA" target="_blank"><img alt="twt" src="images/yt.png" width="19" height="18"/></a></li>
+                                        <li><a href="https://www.facebook.com/pmbjppmbi/" target="_blank"><img alt="fb" src="images/facebook.png"/></a></li>
+                                        <li><a href="https://twitter.com/pmbjppmbi" target="_blank"><img alt="twt" src="images/twitter.png"/></a></li>
+                                        <li><a href="sitemap.aspx"><img alt="sm" src="img/sitemap.png"/></a></li>
+                                        <li><a href="News/Edition-49 JA Varta_14082026.pdf" target="_blank"><img alt="eVarta" src="images/eVarta1.png" width="25" height="25"/></a></li> 
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-0"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+            <div class="menu-wrp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="logo"><a href="index.aspx"><img alt="jan" src="../images/PMBILogo.png" /></a></div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="logo-text" style="font-size:15px">Pharmaceuticals & Medical Devices Bureau of India (PMBI)<p style="font-size:11px">(Under Department of Pharmaceuticals, Government of India)</p></div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="jan"><a href="https://janaushadhi.gov.in"><img alt="logo" src="../images/logo_12112025.png"/></a> </div>
+                        </div>                        
+                        <div class="col-md-2" style="display:none">
+                            <div class="jan"><img alt="jan" src="../img/JAD-GIF1.gif" /></div>
+                        </div>
+                        <div class="col-md-2" style="display:none">
+                            <div class="jan"><img alt="jan" src="../images/JA logo.png" /></div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <!--nav-->
+            <div class="menu-wrp-btm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-14">
+                            <nav id="menu-wrap">
+                                <ul id="menu">
+                                    <li><a href="index.aspx"><img alt="home-icon" src="images/home-icon.png" height="20"/></a></li>
+                                    <li><a href="#">Message <img alt="dro-arrow" src="images/drop-arrow.png" /></a>
+                                        <ul>
+                                            <li><a href="mesgjs.aspx">Chairperson's Desk</a> </li>
+                                            <li><a href="CEODesk.aspx">CEO's Desk</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Governance <img alt="dro-arrow" src="images/drop-arrow.png" /></a>
+                                        <ul>
+                                            <li><a href="governing-council.aspx">Governing Council</a> </li>
+                                            <li><a href="executive-council.aspx">Executive Council</a> </li>
+                                            <li><a href="organizationchart.aspx">Organization Chart</a> </li>
+                                            <li><a href="management-team.aspx">Management Team</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">PMBJP <img alt="dro-arrow" src="images/drop-arrow.png" /> </a>
+                                        <ul>
+                                            <li><a href="aboutbppi.aspx">About Us</a></li>
+                                            <li class="blink_menu"><a href="https://janaushadhi.gov.in/login-to-kendra">Apply for Kendra</a> </li>
+                                            
+                                            <li><a href="DistributorDetails.aspx">Find Distributor</a></li>
+                                            
+                                            
+                                            
+                                            <li><a href="financial_report.aspx">Financial Report</a></li>
+                                            <li><a href="FAQ.aspx">FAQ's</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Product Portfolio <img alt="dro-arrow" src="images/drop-arrow.png"/></a>
+                                        <ul>
+                                            <li><a href="ProductList.aspx">Product & MRP List</a></li>
+                                            <li><a href="SortingView.aspx">Product List (Sorting-view)</a></li>
+                                           
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Media <img alt="dro-arrow" src="images/drop-arrow.png"/> </a>
+                                        <ul>
+                                            <li><a href="picture_gallery.aspx">Gallery</a></li>
+                                            <li><a href="event-calender.aspx">Event Calendar</a></li>
+                                            <li><a href="articles.aspx">In the News</a></li>
+                                            <li><a href="media-material.aspx">Publicity Materials</a></li>
+                                        </ul> 
+                                    </li>
+                                    <li><a href="#">Tender <img alt="dro-arrow" src="images/drop-arrow.png" /></a>
+                                        <ul>
+                                            <li><a href="tenderDetails.aspx">Tender Details</a></li>
+                                            <li><a href="debar.aspx">Debarred List</a></li>
+                                            <li><a href="Blacklist.aspx">Blacklist</a></li>
+                                            <li><a href="AwaredTender.aspx">Awarded Tender</a></li>
+                                            <li><a href="RevocationOrder.aspx">Revocation Order</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Career <img alt="dro-arrow" src="images/drop-arrow.png" /></a>
+                                        <ul>
+                                            <li><a href="currentopening.aspx">Recruitment</a></li>
+                                            <li><a href="Recruitment.aspx">Archive-Recruitment</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="blink_menu"><a href="https://recruitment.pmbi.co.in">Apply Online</a></li>
+                                    <li><a href="#">Support <img alt="dro-arrow" src="images/drop-arrow.png" /></a>
+                                        <ul>
+                                            <li><a href="pacstraining.aspx">PACS Training</a></li>
+                                            <li><a href="postraining.aspx">POS Training</a></li>
+                                            <li><a href="POSVideos.aspx">Download/Training-Link</a></li>
+                                            <li><a href="POSComplaint.aspx">Retail Software Helpline</a></li>
+                                            <li><a href="AppInfo.aspx">Sugam App Helpline</a></li>
+                                            <li><a href="kendracomplaints.aspx">Kendra Complaints</a></li>
+                                            <li><a href="Vendor.aspx">Vendor/Lab Portal</a></li>
+                                            <li><a href="webinar.aspx">Webinar/Tutorials</a></li>
+                                        </ul> 
+                                    </li>
+                                    <li><a href="#">RTI <img alt="dro-arrow" src="images/drop-arrow.png"/></a>
+                                        <ul>
+                                            <li><a href="rti.aspx">RTI ACT</a></li>
+                                            <li><a href="https://rtionline.gov.in/" target="_blank">RTI-Apply/Appeal</a></li>
+                                        </ul> 
+                                    </li>     
+                                    <li class="bdr-r_none1"><a href="contactus.aspx">Contact Us </a> </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--nav end-->
+            <div class="col-md-12">
+                <img alt="sdw" src="images/shadow-2.png" class="img-responsive" />
+            </div>
+            <!--header start end-->
+            
+            <div>
+                
+<section class="content">
+    <div class="inner-header">
+        <div class="container">
+            <ol class="breadcrumb margin-t60">
+                <li><a href="index.aspx">Home</a></li>
+                <li><a href="#">Product Portfolio</a></li>
+                <li class="active">Product & MRP List</li>
+            </ol>
+        </div>
+    </div>
+    <div class="container whitebg">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Find Product details</h1>
+                <img src="images/line.jpg" alt="" class="img-responsive"/>
+            </div>
+        </div>
+    </div>
+    <div class="container whitebg pb20">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    
+                    <div class="col-md-3" style="display:none">
+                        <div class="form-group"><label for="First Name">Select Product Department :</label>
+                            <select name="ctl00$Bppi_body$ddlProduct" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$Bppi_body$ddlProduct\&#39;,\&#39;\&#39;)&#39;, 0)" id="Bppi_body_ddlProduct" class="form-control">
+
+</select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group"><label for="First Name">Search by Drug Code/Product Name/Unit Size/MRP :</label>
+                            <div class="form-group"><input name="ctl00$Bppi_body$txtSearch" type="text" maxlength="10" id="Bppi_body_txtSearch" onkeypress="return /[0-9a-zA-Z]/i.test(event.key)" placeholder="Enter Drug Code/Product Name" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div id="Bppi_body_divSearch">
+                        <input type="submit" name="ctl00$Bppi_body$btnSearch" value="Search" id="Bppi_body_btnSearch" class="form-control" style="color:#FAFAFA;background-color:#245B49;border-color:#245B49;height:40px;width:20%;" />
+                    </div>
+                </div>
+                <span style="font-style:oblique; font-weight:700; color:red"> <b>**</b>Note:- Zero MRP products are under process</span>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="img-responsive">
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-3">
+                <div class="sidebar" style="display:none">
+                    <h3>PMBJP Product</h3>
+                    <ul>
+                        <li class="active-sidebar"> Find Product details</li>
+                        <li> <a href="RateContract.aspx">Rate Contract </a> </li>
+                        <li> <a href="PriceBenefits.aspx">Price Benefits</a> </li>
+                    </ul>
+                </div>
+                <div>
+                    <span style="font-weight:700">Total nos. of Product in PMBI basket: 
+                    <span id="Bppi_body_lbltotalcount" style="color:Red;">2439</span></span><br /><br />
+                                        
+                </div>
+                <div class="download">
+                    <img alt="list" src="images/pdf.png"/>
+                   
+                    <input type="submit" name="ctl00$Bppi_body$BtnExp" value="Export to PDF" id="Bppi_body_BtnExp" class="form-control" style="color:#FAFAFA;background-color:#245B49;border-color:#245B49;height:40px;" />
+                    <span style="font-weight:500; color: blue">To get the complete list, click on search button and export to PDF</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            </div>
+            <footer class="footer-wrp">
+                <div  class="footer-wrp-in">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="footer-nav">
+                                    <ul>
+                                        <li> <a href="copyright.aspx" >Copyright </a></li>
+                                        <li> <a href="hyperlink_policy.aspx">Hyperlink Policy</a></li>
+                                        <li> <a href="privacypolicy.aspx"> Privacy Policy </a></li>
+                                        <li> <a href="disclaimer.aspx">Disclaimer</a></li>
+                                        
+                                        <li><a href="termsConditions.aspx">Terms and Conditions</a></li>
+                                                                                
+                                        <li><a href="downloads.aspx">Archive</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <ul>
+                                        <li class="bdr-r_none">Copyright 2026, Pharmaceuticals & Medical Devices Bureau of India (PMBI). All Rights Reserved.</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="bdr-r_none"><p style="font-size:10px";>This site is best viewed in 1366 x 768 resolution with latest version of Chrome, Firefox, Safari and Microsoft Edge. </p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <script type="text/javascript" src="js/nav.js"></script>
+            <script type="text/javascript" src="js/model.js"></script>
+            <script type="text/javascript" src="js/model1.js"></script>
+            <!-- Modal -->
+            
+        
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+theForm.oldOnLoad = window.onload;
+window.onload = WebForm_RestoreScrollPosition;
+//]]>
+</script>
+</form>
+    </body>
+</html>

@@ -1,38 +1,2678 @@
 {
-  "timestamp": "2026-10-12T14:07:41.874729Z",
+  "timestamp": "2026-10-12T16:59:30.430104Z",
   "source_name": "PMBI_JAN_AUSHADHI",
-  "total_raw_records_processed": 17,
-  "valid_unique_records_staged": 16,
-  "duplicate_records_detected": 1,
+  "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+  "source_file_path": "tooling/medicine_importer/raw_pmbi_catalogue_full.json",
+  "source_file_size_bytes": 850889,
+  "total_raw_records_processed": 2439,
+  "distinct_source_drug_codes": 2439,
+  "staged_sku_count": 2439,
+  "valid_unique_records_staged": 2439,
+  "distinct_staged_drug_codes": 2439,
+  "duplicate_source_rows_count": 0,
+  "duplicate_staged_sku_count": 0,
+  "previously_suppressed_records_restored": 118,
+  "rejected_records_count": 0,
+  "quarantined_or_review_needed_count": 439,
+  "missing_pack_size_count": 0,
+  "missing_or_unparsable_mrp_count": 0,
+  "zero_mrp_count": 387,
+  "missing_or_unresolved_strength_count": 52,
+  "product_category_counts": {
+    "medicine": 2098,
+    "medical_device": 317,
+    "other": 24
+  },
   "dosage_forms_breakdown": {
-    "Tablet": 4,
-    "Capsule": 2,
-    "Suspension": 1,
-    "Infusion": 1,
-    "Eye Drops": 2,
-    "Ointment": 2,
-    "Cream": 2,
-    "Inhaler": 2
+    "Tablet": 1214,
+    "Capsule": 192,
+    "Gel": 40,
+    "Injection": 206,
+    "Suspension": 56,
+    "Cream": 56,
+    "Infusion": 15,
+    "Lotion": 38,
+    "Ointment": 20,
+    "Oral Solution": 22,
+    "Syrup": 47,
+    "Inhaler": 44,
+    "Medical Device": 317,
+    "Powder": 37,
+    "Eye Drops": 49,
+    "Drops": 22,
+    "Spray": 13,
+    "Chewing Gum": 1,
+    "Nutritional / Food Supplement": 24,
+    "Suppository": 3,
+    "Oral Disintegrating Strip": 16,
+    "Lozenges": 1,
+    "Patch": 6
+  },
+  "classification_breakdown": {
+    "Combination": 696,
+    "Generic": 1402,
+    "Medical Device": 317,
+    "Nutritional/Food Supplement": 24
   },
   "identity_verification_breakdown": {
-    "source_confirmed": 16,
-    "unverified": 0
+    "source_confirmed": 2439,
+    "unverified": 0,
+    "regulatory_registered": 0,
+    "withdrawn": 0
   },
   "clinical_verification_breakdown": {
-    "unverified": 16,
-    "clinically_reviewed": 0
+    "unverified": 2439,
+    "clinically_reviewed": 0,
+    "monograph_linked": 0,
+    "flagged_for_review": 0
+  },
+  "formulation_key_summary": {
+    "resolved": 2098,
+    "unresolved_or_device": 341
+  },
+  "ambiguous_classification_records": [],
+  "validation_failures_count": 0,
+  "reconciliation_statement": {
+    "raw_source_rows": 2439,
+    "distinct_drug_codes": 2439,
+    "staged_skus": 2439,
+    "duplicate_source_rows": 0,
+    "rejected_records": 0,
+    "unaccounted_records": 0,
+    "status": "FULL_1_TO_1_RECONCILIATION_CONFIRMED"
   },
   "safety_compliance_check": {
+    "sku_preservation_enforced": true,
     "unverified_clinical_claims_quarantined": true,
     "raw_source_records_preserved": true,
-    "service_role_credentials_used": false
+    "service_role_credentials_used": false,
+    "remote_mutations_executed": false
   },
-  "duplicates_list": [
+  "duplicate_source_rows": [],
+  "zero_mrp_review_records": [
     {
-      "duplicate_natural_key": "metformin_hydrochloride_500_mg_tablet",
-      "primary_drug_code": "145",
-      "duplicate_drug_code": "145",
-      "raw_name": "Metformin Hydrochloride Tablets IP 500 mg (Duplicate Batch Entry)"
+      "drug_code": "701",
+      "name": "Pilocarpine Eye Drops IP 2% W/V",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1029",
+      "name": "Pyrazinamide Tablets IP 1000mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1231",
+      "name": "Vitamin E Acetate 200mg and Levocarnitine 150mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1444",
+      "name": "Janaushadhi Urja (Glucose Powder (Orange Flavour) 500g)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1460",
+      "name": "Insulin Pen",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1510",
+      "name": "Anti-D (Rho) Immunoglobulin (Monoclonal) 300 mcg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1529",
+      "name": "Bimatoprost Ophthalmic Solution 0.01% w/v",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1588",
+      "name": "Collagen Peptide(Type I) 40mg, Sodium Hyaluronate 30mg, Chondroitin Sulfate 200mg and Vitamin C 35mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1635",
+      "name": "Framycetin Skin Cream 1 %",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1637",
+      "name": "Fungal Diastase 180mg, Papain 60mg and Activated Charcoal 75mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1660",
+      "name": "Human Normal Immunoglobulin IP 16.5% (For IM use)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1669",
+      "name": "Isosorbide 20mg and Hydralazine 37.5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1678",
+      "name": "L-carnitine 340mg, Ubidecarenone 50mg, Zinc 5mg, Lycopene 2.5mg and Astaxanthin 8mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1684",
+      "name": "Levodopa 100mg and Carbidopa 25mg Tablets IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1687",
+      "name": "Levosalbutamol 100mcg and Beclomethasone 50mcg Rotacaps",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1703",
+      "name": "Metadoxine 500mg, Silymarin 140mg, L- Ornithin L- Aspartate 150mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1707",
+      "name": "Metoprolol Succinate extended release capsules IP 50mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1761",
+      "name": "Pirfenidone Tablets IP 200mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1797",
+      "name": "Saroglitazar Tablets 4mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1842",
+      "name": "Vitamine B Complex injection (IM/IV) Use",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1883",
+      "name": "Gentamicin 0.3% w/v and Dexamethasone 0.1% w/v Eye Drops",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1907",
+      "name": "Amitriptyline Hydrochloride Tablets IP 5 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1964",
+      "name": "Biphasic Insulin Lispro Injection IP 100IU per ml (25:75)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1965",
+      "name": "Insulin Aspart Injection IP 100IU per ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1973",
+      "name": "Amoxycillin 200Mg , Clavulanic Acid 28.5Mg And Lactic Acid Bacillus 30 Million Spore Dry syrup",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1974",
+      "name": "Amoxycillin 250mg, Cloxacillin 250mg And Lactic Acid Bacillus 100 Million Spore Capsules",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1975",
+      "name": "Amoxycillin 125Mg , Cloxacillin 125Mg And Lactic Acid Bacillus 60 Million Spore Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "1994",
+      "name": "Glycolic Acid 1% w/w, Aloe Vera 5% w/w and Salicylic Acid 2% w/w Facewash",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2020",
+      "name": "Desmopressin Tablets 0.1 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2024",
+      "name": "Ropinirole Tablets IP 4 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2031",
+      "name": "Sofosbuvir 400mg and Velpatasvir 100mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2043",
+      "name": "Domperidone 10mg and Paracetamol 325mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2085",
+      "name": "Carbidopa 10mg and Levodopa 100mg Tablets IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2086",
+      "name": "Carica papaya leaf Extract 1100mg, Goat Milk 250mg and Tinospora Cordifolia 250mg Extract Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2087",
+      "name": "Papaya Leaf Extract 1100mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2103",
+      "name": "Diclofenac Sodium Suppositories 100mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2108",
+      "name": "Frusemide 20mg and Spironolactone 25mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2110",
+      "name": "Isosorbide Mononitrate Sustained release Tablets 50mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2112",
+      "name": "Ketorolac Tromethamine Ophthalmic Solution 0.4% w/v",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2130",
+      "name": "Potassium Magnesium Citrate 978mg, D-Mannose 300mg with Cranberry extract 200mg Sachet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2146",
+      "name": "Combikit of Eplerenone Tablets 25mg and Torsemide Tablets IP 10mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2152",
+      "name": "Beclomethasone Dipropionate 100mcg Rotacaps IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2165",
+      "name": "Evogliptin 5mg and Metformin Hydrochloride Sustained Release 1000mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2166",
+      "name": "Evogliptin 5mg and Metformin Hydrochloride Sustained Release 500mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2167",
+      "name": "Evogliptin Tartarate 5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2171",
+      "name": "Glucosamine Sulphate 1500mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2172",
+      "name": "Di-Hydralazine Hydrochloride 25mg Tablets USP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2178",
+      "name": "Meloxicam 7.5mg Tablets BP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2179",
+      "name": "Meloxicam 15mg Tablets BP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2183",
+      "name": "Metolazone 2.5mg Tablets IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2191",
+      "name": "Progesterone 100mg/2ml Injection IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2193",
+      "name": "Remogliflozin Etabonate 100mg and Vildagliptin 50mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2194",
+      "name": "Remogliflozin Etabonate 100mg and Metformin Hydrochloride 1000mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2195",
+      "name": "Remogliflozin Etabonate 100mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2196",
+      "name": "Remogliflozin Etabonate Tablets 100mg and Metformin Hydrochloride 500mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2199",
+      "name": "Ropinirole Tablets 0.25mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2205",
+      "name": "Verapamil Hydrochloride Prolonged Release 120mg Tablets IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2229",
+      "name": "Amorphous Hydrogel Wound Dressing with Colloidal Silver",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2239",
+      "name": "Cereal Based Foods Products (for Baby above 6 months)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2251",
+      "name": "Recombinant Human Tissue type Plasminogen Activator Injection 20mg (Alteplase)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2252",
+      "name": "Recombinant Human Tissue type Plasminogen Activator Injection 50mg (Alteplase)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2253",
+      "name": "Bisacodyl Suppositories IP 5mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2260",
+      "name": "Salicylic Acid 3% powder",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2262",
+      "name": "Somatotropin 4 IU (Recombinant Human Growth Hormone) Powder for Injection",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2265",
+      "name": "Multivitamin Syrup Chocolate Flavour",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2267",
+      "name": "Nicotine Oral Disintegrating Strips 4mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2278",
+      "name": "Vitamin C Effervescent Tablets (Vitamin C 1000mg, Vitamin D3 400 IU, Zinc 10mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2280",
+      "name": "Dextromethorphan Hydrobromide Lozenges 5mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2281",
+      "name": "Vitamin A 600mcg, Vitamin C 500mg, Vitamin D3 1000 IU and Zinc 50mg Chewable Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2282",
+      "name": "Para Aminobenzoic Acid100mg, Calcium Pant 100mg, Niacinamide12mg, L-Arginine50mg L-Cysteine50mg, DL-Methionine40mg, L-Lysine20mg, Zinc25mg, Inositol 10mg, Biotin10mg, Ferrous10mg, Copper2mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2283",
+      "name": "Abiraterone Acetate Tablets 250mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2285",
+      "name": "Myo-Inositol 1000mg, L-Methyl Folate 100mcg, Vitamin D3 1000 IU, Acetylcysteine 600mg, L-Arginine 100mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2287",
+      "name": "Alogliptin 25mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2288",
+      "name": "Armodafinil 50mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2294",
+      "name": "Brinzolamide 10mg and Brimonidine 2mg Ophthalmic Suspension 5ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2312",
+      "name": "Empagliflozin 10mg and Linagliptin 5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2318",
+      "name": "Tannic Acid Glycerin 27% w/v, Potassium Iodide 0.05% w/v, Iodine 0.03% w/v, Menthol 0.05% w/v and Thymol 0.033% w/v with Glycerine Mouth Paint",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2322",
+      "name": "Lidocaine (3% W/W), Calcium Dobesilate (0.25% W/W), Hydrocortisone (0.25% W/W), Phenylephrine (0.1% W/W), Zinc Oxide (5% W/W), Troxerutin (2% W/W) Cream",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2323",
+      "name": "Lithium Carbonate Tablets IP 300mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2324",
+      "name": "L-Methylfoate Calcium 0.5mg, Vit K2 10mcg, Vit D 400 IU, Methylcobalamin 1500mcg, Pyridoxal-5-Phosphate 1.5mg, Lycopene 5000mcg, Calcium Citrate Malate 250mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2329",
+      "name": "Midazolam 0.5mg Nasal Spray",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2337",
+      "name": "Olopatadine Hydrochloride 0.4% w/v and Ketorolac 0.1 % w/v Ophthalmic Solution",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2339",
+      "name": "Polyethylene Glycol 400- 0.4% w/v and Propylene Glycol 0.3% w/v Ophthalmic solution",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2343",
+      "name": "Procyclidine 2.5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2345",
+      "name": "Pyridoxine-3mg, Niacinamide-50mg, Folic Acid-1.5mg, Lactic Acid Bacillus 4 million spores Capsules",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2355",
+      "name": "Trazodone Hydrochloride 50mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2359",
+      "name": "Venlafaxine Prolonged Release Capsules 150mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2366",
+      "name": "Melatonin 5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2367",
+      "name": "Methimazole 10mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2379",
+      "name": "Madhu (Makshik) 500g",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2382",
+      "name": "Aceclofenac 200mg and Cyclobenzaprine 15mg Sustained Release Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2383",
+      "name": "Aceclofenac 100mg and Tizanidine 2mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2384",
+      "name": "Amorolfine Nail Lacquer 5.0% w/w",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2387",
+      "name": "Atorvastatin (10mg) + Aspirin (75mg) + Ramipril (5mg) Capsule",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2388",
+      "name": "Atorvastatin (10mg) + Fenofibrate (160mg) + Ezetimibe (10mg) Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2395",
+      "name": "Baricitinib Tablets 4mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2399",
+      "name": "Bortezomib 2.5mg powder for Injection",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2401",
+      "name": "Carbimazole Tablets IP 20mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2402",
+      "name": "Cefadroxil Oral Suspension IP 125mg per 5ml (dry syrup)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2405",
+      "name": "Ciclopirox Olamine Nail Lacquer 8% w/v",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2407",
+      "name": "Conjugated Estrogens 0.625mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2408",
+      "name": "Crizotinib Capsules 250mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2419",
+      "name": "Ezetimibe Tablets IP 5mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2422",
+      "name": "Glycolic Acid 2% w/v, Salicylic acid 1% w/v, Niacinamide 0.5%w/v, Licorice Extract 1% w/v, Vitamin E 0.2% w/v and Aloe Vera 1% w/v Face Wash",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2429",
+      "name": "Levodopa 200mg and Carbidopa 50mg Prolonged Release Tablets IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2434",
+      "name": "Macitentan Tablets 10mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2435",
+      "name": "Mebendazole Oral Suspension 100mg per ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2439",
+      "name": "Metoclopramide Hydrochloride Syrup IP 5mg per 5ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2445",
+      "name": "Nebivolol 2.5mg + Amlodipine 2.5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2454",
+      "name": "Penicillin G Tablets 400000 IU",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2455",
+      "name": "Penicillin G Tablets 800000 IU",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2456",
+      "name": "Pepsin (12.50g) + Alpha-amylase (18.75mg) Capsules",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2460",
+      "name": "Ramipril Tablets IP 1.25mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2461",
+      "name": "Remogliflozin Etabonate 100mg and Teneligliptin 10mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2462",
+      "name": "Remogliflozin Etabonate 100mg, Vildagliptin 50mg and Metformin Hydrochloride 500mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2486",
+      "name": "Travoprost 40mcg and Timolol 5mg Eye Drops",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2491",
+      "name": "Cetirizine Tablets IP 5mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2496",
+      "name": "Pantoprazole 40mg and Domperidone 10mg Capsules",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2499",
+      "name": "Aceclofenac 1.00% w/w, Menthol 5.00% w/w Spray",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2500",
+      "name": "Aceclofenac 1.5% w/w gel, 30g",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2501",
+      "name": "Ambrisentan Tablets 10mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2502",
+      "name": "Ambrisentan Tablets 5mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2503",
+      "name": "Janaushadhi Antiseptic Bandage Spray (Cetrimide 0.10% w/w with Lidocaine 1.0% w/w Spray)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2504",
+      "name": "Azilsartan Medoxomil Tablets 20mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2507",
+      "name": "Betamethasone Sodium Phosphate 0.1% w/v and Neomycin Sulphate 0.5% w/v Eye/Ear Drops",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2508",
+      "name": "Betamethasone Sodium Phosphate 0.1% w/v and Ofloxacin 0.3% w/v Eye/Ear Drops",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2510",
+      "name": "Janaushadhi Burn Relief Spray (Lidocaine 3% w/w and Benzethonium 0.20% w/w Spray)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2517",
+      "name": "Citicoline Syrup 500mg per 5ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2519",
+      "name": "Combi kit of Torasemide 20mg Tablets and Eplerenone 25mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2520",
+      "name": "Combipack of Ambrisentan 5mg and Tadalafil 20mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2535",
+      "name": "Diclofenac 200mg Transdermal patch",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2536",
+      "name": "Diclofenac Diethylamine 1.16% w/w, Sesame oil 2.5% w/w, Linseed oil 0.5% w/w, Methyl Salicylate 10% w/w & Menthol 5% w/w Gel",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2537",
+      "name": "Diclofenac Sodium 2% w/v, Methyl Salicylate 10% w/v, Menthol 5%, Absolute alcohol 10% v/v Spray",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2541",
+      "name": "Duloxetin Hydrochloride (Delayed Release) 20mg and Mecobalamin 1.5mg Capsules",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2542",
+      "name": "Duloxetin Hydrochloride (Delayed Release) 30mg and Mecobalamin 1.5mg Capsules",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2543",
+      "name": "Ebastine 10mg and Phenylephrine 10mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2544",
+      "name": "Efonidipine Hydrochloride Ethanolate 20mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2546",
+      "name": "Empagliflozin 25mg and Linagliptin 5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2547",
+      "name": "Entacapone Tablets IP 200mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2551",
+      "name": "Etizolam Controlled release Tablets IP 1.5mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2556",
+      "name": "Fluconazole Dusting Powder 2% w/w",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2557",
+      "name": "Fluocinolone acetonide 0.01% w/w, Miconazole 2% w/w and Neomycin 0.5% w/w ointment, 10g",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2559",
+      "name": "Frusemide 40mg and Amiloride 5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2560",
+      "name": "Frusemide 40mg and Potassium Chloride 600mg (CR) Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2563",
+      "name": "Hydroquinone 2% w/w, Tretinoin 0.05% w/w and Fluocinolone acetonide 0.01% w/w Cream",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2564",
+      "name": "Hydroquinone 4% w/w, Tretinoin 0.05% w/w and Fluocinolone acetonide 0.01% w/w cream, 20g",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2570",
+      "name": "Imeglimin Hydrochloride Tablets 1000mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2572",
+      "name": "Indacaterol 150mcg and Mometasone Furoate 160mcg Powder for Inhalation",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2573",
+      "name": "Indacaterol 150mcg and Mometasone Furoate 320mcg Powder for Inhalation",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2574",
+      "name": "Indacaterol 150mcg and Mometasone Furoate 80mcg Powder for Inhalation",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2575",
+      "name": "Ipratropium Bromide Inhaler 20mcg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2576",
+      "name": "Itraconazole Dusting Powder 1% w/w",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2580",
+      "name": "Ketoprofen 2.5% Gel",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2582",
+      "name": "Latanoprost 50mcg and Timolol Maleate 5mg Opthalmic solution",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2583",
+      "name": "Leucovorin Calcium Tablets IP 15mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2588",
+      "name": "Levodopa 100mg , Carbidopa 25mg and Entacapone 200mg Tablets IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2589",
+      "name": "Levodopa 150mg , Carbidopa 37.5mg and Entacapone 200mg Tablets IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2590",
+      "name": "Levodopa 50mg, Carbidopa 12.5mg and Entacapone 200mg Tablets IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2592",
+      "name": "Lignocaine (Lidocaine) Hydrochloride 2.5% w/w and Prilocaine 2.5% w/w Gel",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2595",
+      "name": "Linagliptin 2.5mg and Dapagliflozin 10mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2596",
+      "name": "Linagliptin 2.5mg and Dapagliflozin 5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2599",
+      "name": "Linagliptin 5mg and Dapagliflozin 5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2602",
+      "name": "Methotrexate Injection IP 25mg/ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2603",
+      "name": "Methotrexate Injection IP 50mg/2ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2605",
+      "name": "Miconazole Nitrate 20mg, Mometasone Furoate 1mg and Nadifloxacin 10 mg cream",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2612",
+      "name": "Neostigmine Methylsulphate Injection IP 2.5mg/ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2613",
+      "name": "Nitrofurantoin 50mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2617",
+      "name": "Janaushadhi Pain Relief Spray (Wintergreen Tel 20% w/w, karpura 10% w/w, turpentine Oil 10% w/w, Nilgiri ka Tel 6% w/w, Pudina ka Phool 4% w/w, Lavang ka Tel 1% w/w, Cinnamon Oil 0.5% w/w)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2618",
+      "name": "Panitumumab 100mg Infusion",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2619",
+      "name": "Panitumumab 400mg Infusion",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2620",
+      "name": "Papain 10mg, Fungal Diastase (Alpha Amylase 1:800) 20mg, Caraway oil 2mg, Anise Oil 2mg and Dil oil 2mg Oral Drops",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2621",
+      "name": "Papain 60mg and Fungal Diastase (Alpha Amylase 1:800) 75mg Syrup",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2623",
+      "name": "Povidone Iodine IP 5% w/w Spray",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2625",
+      "name": "Rasagiline Tablets 0.5mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2626",
+      "name": "Rasagiline Tablets 1mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2628",
+      "name": "Selexipag Tablets 400mcg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2629",
+      "name": "Sertaconazole Dusting Powder 2% w/w",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2633",
+      "name": "Strontium chloride hexahydrate 10% w/w Toothpaste",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2634",
+      "name": "Surgical Spirit IP (Methyl Salicylate 0.5% v/v, Diethyl Pthalate 2% v/v & Castor Oil 2.5% v/v)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2639",
+      "name": "Terbinafine Hydrochloride Dusting Powder 1% w/w",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2640",
+      "name": "Throat Spray (Chamomile extract, peppermint oil, Sage oil, Pine Needle oil, Bergamot oil, Cineole oil, Methyl salicylate, Ethyl Alcohol, Propylene Glycol, Glycerin, Citric acid, Polysorbate 80, water)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2641",
+      "name": "Tobramycin 0.3% w/v and Fluoromethalone 0.1% w/v Opthalmic Solution IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2648",
+      "name": "Torasemide 10mg and Amiloride 5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2650",
+      "name": "Tranylcypromine Tablets 10mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2651",
+      "name": "Triclofos oral Solution IP",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2652",
+      "name": "Tulobuterol Transdermal patch 0.5mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2658",
+      "name": "Amisulpride Tablets IP 25 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2659",
+      "name": "Amisulpride Sustained Release Tablets 100 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2660",
+      "name": "Amisulpride Sustained Release Tablets 200 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2661",
+      "name": "Amisulpride Sustained Release Tablets 300 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2662",
+      "name": "Amisulpride Sustained Release Tablets 400 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2663",
+      "name": "Budesonide 160 mcg and Formoterol 4.5mcg Inhalation Powder",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2669",
+      "name": "Cariprazine Capsules 4.5 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2670",
+      "name": "Cariprazine Capsules 6 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2671",
+      "name": "Cefazolin Sodium Injection IP 250 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2672",
+      "name": "Cefazolin Sodium Injection IP 500 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2673",
+      "name": "Cefazolin Sodium Injection IP 1g",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2675",
+      "name": "Cyclobenzaprine Extended-release Capsules 15mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2680",
+      "name": "Dexchlorpheniramine Maleate Sustained Release Tablets 6mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2681",
+      "name": "Dexchlorpheniramine Maleate Tablets IP 2mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2690",
+      "name": "Fluocinonide Topical Gel 0.05%w/w",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2697",
+      "name": "Itraconazole Eye drops 1% w/v",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2698",
+      "name": "Levocetirizine Orally Disintegrating Strips 2.5 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2701",
+      "name": "Lurasidone Hydrochloride Tablets 20 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2704",
+      "name": "Maraviroc Tablets 150 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2708",
+      "name": "Montelukast Sodium 4mg and Fexofenadine 60mg per 5ml Suspension",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2710",
+      "name": "N-Acetylcysteine 600 mg And Pyridoxine Hydrochloride 50 mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2711",
+      "name": "Naproxen 500 mg Delayed Release and Esomeprazole 20mg Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2714",
+      "name": "Nifedipine Extended Release Tablets IP 60 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2715",
+      "name": "Octreotide long acting release Injection 20mg (Lyophilised)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2719",
+      "name": "Olaparib Tablet 100 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2720",
+      "name": "Olaparib Tablet 150 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2726",
+      "name": "Pancreatin Capsules 40000",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2727",
+      "name": "Pilocarpine Tablets 5mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2730",
+      "name": "Risperidone 3mg Trihexyphenidyl 2 mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2734",
+      "name": "Rivastigmine Capsules 3mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2735",
+      "name": "Rivastigmine Capsules 4.5 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2736",
+      "name": "Rivastigmine Capsules 6 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2737",
+      "name": "Rivastigmine Transdermal Patch 9mg (4.6mg/24 hour)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2738",
+      "name": "Rivastigmine Transdermal Patch 18mg (9.5mg/24 hour)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2739",
+      "name": "Rivastigmine Transdermal Patch 27mg (13.3mg/24 hour)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2742",
+      "name": "Romiplostim Powder and Solvent for solution for Injection 250mcg per 0.5 vial",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2743",
+      "name": "Romiplostim Powder and Solvent for solution for Injection 500mcg per vial",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2745",
+      "name": "Sildenafil Orally Disintegrating Strips 100 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2765",
+      "name": "Vancomycin Hydrochloride for Intravenous Infusion IP 1000 mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2766",
+      "name": "Vancomycin Hydrochloride Capsules IP 250mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2768",
+      "name": "Vildagliptin 50mg and Dapagliflozin 5mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2769",
+      "name": "Vincristine Injection 1mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2774",
+      "name": "Fluconazole Injection 2mg per ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2775",
+      "name": "Janaushadhi Urja (Glucose Powder (Orange Flavour) 1kg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2776",
+      "name": "Janaushadhi Urja (Glucose Powder 500g)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2777",
+      "name": "Janaushadhi Urja (Glucose Powder 1kg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2778",
+      "name": "Janaushadhi Onco-Care Protein Powder",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2782",
+      "name": "Janaushadhi Ragi Malt based food (1000gm)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2783",
+      "name": "Janaushadhi Ragi Sticks (Chocolate)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2784",
+      "name": "Janaushadhi Energy Drink (Orange Flavour)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2785",
+      "name": "Abiraterone Acetate Tablets 500mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2786",
+      "name": "Amlodipine + Enalapril Tablet (5/5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2787",
+      "name": "Amlodipine + Indapamide Tablet (5/1.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2789",
+      "name": "Atenolol + Chlorthalidone Tablet (25/12.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2790",
+      "name": "Atenolol + Chlorthalidone Tablet (50/12.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2791",
+      "name": "Atenolol + Indapamide Tablet (50/2.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2792",
+      "name": "Atenolol + Losartan Tablet (50/50 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2793",
+      "name": "Atenolol + Nifedipine Tablet (50/20 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2794",
+      "name": "Atomoxetine Tablet (10 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2795",
+      "name": "Azelaic Acid 20% Cream",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2796",
+      "name": "Benidipine + Telmisartan Tablet (4/40 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2797",
+      "name": "Benzoyl Peroxide 5% Soap",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2798",
+      "name": "Benzoyl Peroxide Gel 5%",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2799",
+      "name": "Buspirone Tablet (10 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2800",
+      "name": "Buspirone Tablet (5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2801",
+      "name": "Carbetocin Injection 100mcg /ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2802",
+      "name": "Clonazepam + Propranolol Tablet (0.25/10 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2803",
+      "name": "Clonazepam + Propranolol Tablet (0.25/20 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2804",
+      "name": "Clonazepam + Propranolol Tablet (0.5/20 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2805",
+      "name": "Combo pack of Vitamin C Injection IP and Vitamin B12, Folic acid and Niacinamide injection",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2806",
+      "name": "Enzalutamide Tablet 40Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2807",
+      "name": "Filgrastim injection 300mcg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2808",
+      "name": "Flecanide Tablets 100Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2809",
+      "name": "Flecanide Tablets 50Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2810",
+      "name": "Fluoxetine 10 Mg Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2811",
+      "name": "Fluoxetine Capsules 60Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2812",
+      "name": "Gliclazide + Pioglitazone + Metformin Tablet (30/15/500 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2813",
+      "name": "Gliclazide + Pioglitazone + Metformin Tablet (60/15/500 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2814",
+      "name": "Glycolic Acid Cream 12%",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2815",
+      "name": "Glycolic Acid Cream 6%",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2816",
+      "name": "Glycopyrrolate Tablet 1Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2817",
+      "name": "Glycopyrrolate Tablet 2Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2818",
+      "name": "Halobetasol & Fusidic Acid Cream 0.05/2%",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2819",
+      "name": "Human Papillomavirus Quadrivalent (Types 6, 11, 16, And 18) Vaccine, Recombinant",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2820",
+      "name": "Ibrutinib Capsule 140 Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2821",
+      "name": "Imipramine + Diazepam Tablet (25/2 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2822",
+      "name": "Imipramine + Diazepam Tablet (25/5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2823",
+      "name": "Testosterone Enanthate Injection 250mg per 1 ml",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2824",
+      "name": "Lenvatinib Capsules IP 4Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2825",
+      "name": "Levetiracetam Tablets IP 500 Mg XR",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2826",
+      "name": "Losartan + Chlorthalidone Tablet (25/6.25 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2827",
+      "name": "Losartan + S- Amlodipine Tablet (50/2.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2828",
+      "name": "Melatonin + Zolpidem Tablet (3/10 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2829",
+      "name": "Melatonin + Zolpidem Tablet (3/5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2830",
+      "name": "Methylphenidate Tablet 10Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2831",
+      "name": "Methylphenidate Tablet 18Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2832",
+      "name": "Methylphenidate Tablet 20Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2833",
+      "name": "Methylphenidate Tablet 5Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2834",
+      "name": "Metoprolol + Chlorthalidone Tablet (25/6.25 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2835",
+      "name": "Metoprolol + Chlorthalidone Tablet (50/12.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2836",
+      "name": "Metoprolol + Chlorthalidone Tablet (50/6.25 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2837",
+      "name": "Minoxidil 5Mg Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2838",
+      "name": "Naltrexone 50Mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2839",
+      "name": "Nimodipine Tablet (30 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2840",
+      "name": "Olmesartan + Amlodipine + Chlorthalidone Tablet (40/5/12.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2841",
+      "name": "Olmesartan + Metoprolol Tablet (20/25 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2842",
+      "name": "Olmesartan + Metoprolol Tablet (20/50 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2843",
+      "name": "Opipramol Dihydrochloride Tablets (50 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2844",
+      "name": "Opipramol Tablet (50 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2845",
+      "name": "Orlistat Capsules 60Mg",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2846",
+      "name": "Perampanel Tablet (2 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2847",
+      "name": "Perampanel Tablet (4 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2848",
+      "name": "Pioglitazone + Glimepiride Tablet (15/2 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2849",
+      "name": "Polmacoxib 2 Mg Capsules",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2850",
+      "name": "Rosuvastatin + Cholecalciferol Tablet (10 Mg/1000 IU)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2851",
+      "name": "Rosuvastatin + Ezetimibe Tablet (10/ 10Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2852",
+      "name": "Rosuvastatin + Ezetimibe Tablet (20/ 10Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2853",
+      "name": "Rosuvastatin 20Mg And Clopidogrel 75Mg Capsules",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2854",
+      "name": "Safinamide Tablet (50 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2855",
+      "name": "S-Amlodipine + Hydrochlorothiazide Tablet (2.5/12.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2856",
+      "name": "Sitagliptin + Pioglitazone + Metformin Tablet (100/15/500 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2857",
+      "name": "S-Metoprolol + S-Amlodipine Tablet (25/2.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2858",
+      "name": "S-Metoprolol + S-Amlodipine Tablet (25/5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2859",
+      "name": "S-Metoprolol + Telmisartan Tablet (25/ 20Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2860",
+      "name": "Telmisartan + Indapamide Tablet (40/1.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2861",
+      "name": "Telmisartan + Rosuvastatin Tablet (40/10 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2862",
+      "name": "Telmisartan + S- Amlodipine Tablet (40/2.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2863",
+      "name": "Telmisartan + S- Amlodipine Tablet (40/5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2864",
+      "name": "Tianeptine Tablet (12.5 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2865",
+      "name": "Tofisopam Tablet (50 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2866",
+      "name": "Trifluoperazine + Trihexyphenidyl Tablet (2.5/1 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2867",
+      "name": "Trifluoperazine + Trihexyphenidyl Tablet (5/2 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2868",
+      "name": "Voglibose + Metformin + Gliclazide Tablet (0.2/500/80 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2869",
+      "name": "Voglibose + Metformin + Gliclazide Tablet (0.3/500/80 Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2870",
+      "name": "Cefepime 250 Mg Inection",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2871",
+      "name": "Cefepime 1000Mg and Tazobactam 125Mg Injection",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2872",
+      "name": "Ciclesonide (200Mcg) + Formoterol (6Mcg) + Tiotropium (9Mcg) Inhaler",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2873",
+      "name": "Dolutegravir (50 Mg) + Emtricitabine (200 Mg) + Tenofovir Alafenamide (25 Mg) Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2874",
+      "name": "Dolutegravir (50Mg) + Lamivudine (300Mg) + Tenofovir Disoproxil Fumarate (300Mg) Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2875",
+      "name": "Ketoprofen 30 Mg Patch",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2876",
+      "name": "Lamivudine 100 Mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2877",
+      "name": "Levetiracetam (100Mg) Injection",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2878",
+      "name": "Levetiracetam 500 Mg Injection",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2879",
+      "name": "Magnesium Sulphate Injection 50%",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2880",
+      "name": "Minocycline (100Mg) Modified Release Capsule",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2881",
+      "name": "Minocycline (45Mg) Extended Release Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2882",
+      "name": "Minocycline (50Mg) Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2883",
+      "name": "Minocycline (65Mg) Extended Release Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2884",
+      "name": "Minocycline 100 Mg Tab",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2885",
+      "name": "Mosapride (5Mg) + Dimethicone (125Mg) Chewable Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2886",
+      "name": "Mosapride Citrate 5 Mg Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2887",
+      "name": "Nifedipine 5Mg Capsule",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2888",
+      "name": "Olopatadine 5 Mg Tab",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2889",
+      "name": "Pantoprazole (40 Mg) + Mosapride (15 Mg) Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2890",
+      "name": "Phenobarbitone 200mg/1ml Injection",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2891",
+      "name": "Phenobarbitone Sodium 20mg per 5ml Syrup",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2892",
+      "name": "Prednisolone (15Mg/5Ml) Syrup",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2893",
+      "name": "Prednisolone Dispersible Tablet (20Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2894",
+      "name": "Prednisolone Tablet (40Mg)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2895",
+      "name": "Rabeprazole (20 Mg) + Mosapride (15Mg) Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2896",
+      "name": "Rupatadine (10Mg) + Montelukast (10Mg) Tablet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2897",
+      "name": "Rupatadine 10 Mg Tab",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2898",
+      "name": "Sumatriptan 50 Mg Tablets",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2899",
+      "name": "Terazosin (1Mg) Tab",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "2900",
+      "name": "Terazosin (2Mg) Tab",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "8087",
+      "name": "Automatic Snap-Out Folding Walking Cane Stick with Adjustable Length",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "8196",
+      "name": "Heating Pad (Electrical)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "8197",
+      "name": "Exercise Ball (Universal Size)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9010",
+      "name": "Medicated Corn Remover",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9011",
+      "name": "Perforated Plaster",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9027",
+      "name": "Microfine/Hypodermic Needle for Insulin Pen Sterile Single-Use Needle for Insulin Pen Needles Measurement",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9029",
+      "name": "Digital Weighing Scale",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9034",
+      "name": "Janaushadhi Swabhiman (Adult Diaper; Pant Style Small; Waist Size: 28 inch - 35 inch)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9037",
+      "name": "Janaushadhi Swabhiman (Adult Diaper; Pant Style Extra Large; Waist Size: 48 inch - 65 inch)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9042",
+      "name": "Nebulizer Mask with Tubing (Child)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9043",
+      "name": "Walker (Sit Assist-to-stand support)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9044",
+      "name": "Elbow Crutch (Adjustable)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9045",
+      "name": "Insulin/Medicine Cooling Case",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9046",
+      "name": "Cervical Collar - Hard",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9047",
+      "name": "Range of Motion - Knee Brace",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9048",
+      "name": "Range of Motion - Elbow Brace",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9049",
+      "name": "Disposable Maternity Pad Fixator",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9050",
+      "name": "Non-Woven Adhesive Wound Dressing",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9051",
+      "name": "Finger Saperator - Hand",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9052",
+      "name": "Finger Saperator - Feet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9053",
+      "name": "Cervical Collar - Hard (large)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9054",
+      "name": "Disposable Maternity Pad Fixator (Extra Large)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9055",
+      "name": "Hydrophillic Foam Silver Wound Dressing (Non-Adhesive) 5cm x 5cm",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9056",
+      "name": "Fibrin Sealant Kit I.P. (2inch X 4 inch)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9057",
+      "name": "Disposable Under Sheet",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9058",
+      "name": "Foldable Commode Stool (U - Shape)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9059",
+      "name": "Pregnancy Back Support Belt",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9060",
+      "name": "Reinforced Adhesive Skin Closures",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9061",
+      "name": "Foot Elevator Pillow with Adjustable Hook and Loop",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9062",
+      "name": "Elastic Net Fixator Bandage",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9063",
+      "name": "Elastic Net Fixator Bandage",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9064",
+      "name": "Elastic Net Fixator Bandage",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9065",
+      "name": "Elastic Net Fixator Bandage",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9066",
+      "name": "Ankle binder Support (Medium)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9067",
+      "name": "Ankle binder Support (Large)",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    },
+    {
+      "drug_code": "9068",
+      "name": "Cotton Ear Buds",
+      "mrp": 0.0,
+      "reason": "Listed with official source MRP of 0.00 INR (requires commercial catalogue review)"
+    }
+  ],
+  "unresolved_strength_review_records": [
+    {
+      "drug_code": "115",
+      "name": "Calamine Lotion IP",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "225",
+      "name": "Syrup of Iron and Folic Acid in a flavoured Base",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "227",
+      "name": "Polyvitamin Tablets NFI (Prophylactic)",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "230",
+      "name": "Vitamin B-Complex fort Zinc Capsule",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "232",
+      "name": "Vitamin B-Complex Syrup",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "359",
+      "name": "Tetanus Vaccine IP",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "468",
+      "name": "Bacillus Clausii Spores Suspension 2 Billion per 5ml",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "471",
+      "name": "Oxetacaine, Aluminium Hydroxide and Magnesium Hydroxide Suspension",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "574",
+      "name": "Rabies Vaccine, Human IP",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "580",
+      "name": "Ginseng, Multivitamins and multiminerals Capsules",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "582",
+      "name": "Vitamins A,C,D,E,And B Complex and Minerals Syrup",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "592",
+      "name": "L-Lysine + Multivitamins (Vit-B1,B2,B3,B5,B6 ) Syrup",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "594",
+      "name": "Dextrose Monohydrate IP Powder",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "630",
+      "name": "Liquid Paraffin 3.75ml and Milk of Magnesia 11.25ml per 15ml Suspension",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "656",
+      "name": "Diastase and Pepsin Enzyme Drops",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "665",
+      "name": "Vitamin B Complex and Ascorbic Acid Capsules",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "668",
+      "name": "Multivitamin Drops",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "720",
+      "name": "Ringer Lactate Infusion",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "722",
+      "name": "Water for Injection amp polypack 5 ml",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "723",
+      "name": "Water for Injection amp polypack 10ml",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "951",
+      "name": "Lycopene with Multivitamins and Multi Minerals Syrup",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1219",
+      "name": "Amino Acid Solution for IV",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1445",
+      "name": "Jan Pudina Soft Gel Capsules",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1449",
+      "name": "Enzyme syrup mixed fruit flavour",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1511",
+      "name": "Antioxidant Capsules",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1537",
+      "name": "Calcium and Vitamin D3 Capsules",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1542",
+      "name": "Calcium, Magnesium, zinc and Vitamin D-3 Oral Suspension",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1584",
+      "name": "Coenzyme Q10 (Ubidecarenone) and L-Carnitine Tablets",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1585",
+      "name": "Colistimethate Sodium for Injection IP 1 Million IU",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1586",
+      "name": "Colistimethate Sodium for Injection IP 4.5 Million IU",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1636",
+      "name": "Fungal Diastase with Carminatives Syrup",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1739",
+      "name": "Pancreatin Capsules 10000",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1740",
+      "name": "Pancreatin Capsules 25000",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "1842",
+      "name": "Vitamine B Complex injection (IM/IV) Use",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2066",
+      "name": "Lignocaine Hydrochloride Injection IP (20ml)",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2149",
+      "name": "Pre & Pro-Biotic Capsules (Bacillus Mesentericus - 2M, Clostridium Butyricum - 4M, Lactobacillus Sporogenes - 100M, Streptococcus Faecalis - 60M)",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2175",
+      "name": "Iron Sucrose Injection",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2221",
+      "name": "Alpha Ketoanalouge and Essential Amino Acid Tablets",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2240",
+      "name": "Diabetes Care Protein Powder",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2241",
+      "name": "Renal care protein powder (Low Protein)",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2242",
+      "name": "Renal care protein powder for dialysis patients (High Protein)",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2243",
+      "name": "Oral Rehydration Salt (Liquid form)",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2265",
+      "name": "Multivitamin Syrup Chocolate Flavour",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2513",
+      "name": "Calcium Citrate and Vitamin D3 Chewable Tablets",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2640",
+      "name": "Throat Spray (Chamomile extract, peppermint oil, Sage oil, Pine Needle oil, Bergamot oil, Cineole oil, Methyl salicylate, Ethyl Alcohol, Propylene Glycol, Glycerin, Citric acid, Polysorbate 80, water)",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2651",
+      "name": "Triclofos oral Solution IP",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2726",
+      "name": "Pancreatin Capsules 40000",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2775",
+      "name": "Janaushadhi Urja (Glucose Powder (Orange Flavour) 1kg)",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2777",
+      "name": "Janaushadhi Urja (Glucose Powder 1kg)",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2778",
+      "name": "Janaushadhi Onco-Care Protein Powder",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2805",
+      "name": "Combo pack of Vitamin C Injection IP and Vitamin B12, Folic acid and Niacinamide injection",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
+    },
+    {
+      "drug_code": "2819",
+      "name": "Human Papillomavirus Quadrivalent (Types 6, 11, 16, And 18) Vaccine, Recombinant",
+      "reason": "Strength description not in standard numerical unit format or multivitamin blend"
     }
   ]
 }
