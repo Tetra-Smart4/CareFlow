@@ -1,0 +1,930 @@
+[
+  {
+    "id": "med_in_pmbi_145",
+    "natural_key": "metformin_hydrochloride_500_mg_tablet",
+    "name": "Metformin Hydrochloride Tablets IP 500 mg",
+    "brand_name": null,
+    "generic_name": "Metformin Hydrochloride",
+    "ingredients": [
+      {
+        "name": "Metformin Hydrochloride",
+        "strength": "500 mg"
+      }
+    ],
+    "composition": "Metformin Hydrochloride 500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Tablet",
+    "dosage_category": "solid_oral",
+    "route": "oral",
+    "pack_size": "10's",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H",
+    "mrp_inr": 6.6,
+    "group_name": "Anti-Diabetic",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "145",
+      "retrieved_at": "2026-10-12T14:07:41.871723Z",
+      "raw_source_record": {
+        "drug_code": "145",
+        "generic_name": "Metformin Hydrochloride Tablets IP 500 mg",
+        "unit_size": "10's",
+        "mrp_inr": 6.6,
+        "group_name": "Anti-Diabetic",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.872853Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_144",
+    "natural_key": "metformin_hydrochloride_1000_mg_tablet",
+    "name": "Metformin Hydrochloride Sustained/Prolonged Release Tablets IP 1000 mg",
+    "brand_name": null,
+    "generic_name": "Metformin Hydrochloride",
+    "ingredients": [
+      {
+        "name": "Metformin Hydrochloride",
+        "strength": "1000 mg"
+      }
+    ],
+    "composition": "Metformin Hydrochloride 1000 mg",
+    "strength": "1000 mg",
+    "dosage_form": "Tablet",
+    "dosage_category": "solid_oral",
+    "route": "oral",
+    "pack_size": "10's",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H",
+    "mrp_inr": 12.0,
+    "group_name": "Anti-Diabetic",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "144",
+      "retrieved_at": "2026-10-12T14:07:41.872853Z",
+      "raw_source_record": {
+        "drug_code": "144",
+        "generic_name": "Metformin Hydrochloride Sustained/Prolonged Release Tablets IP 1000 mg",
+        "unit_size": "10's",
+        "mrp_inr": 12.0,
+        "group_name": "Anti-Diabetic",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.872853Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_39",
+    "natural_key": "amoxycillin_and_potassium_clavulanate_500mg_125mg_tablet",
+    "name": "Amoxycillin and Potassium Clavulanate Tablets IP 625 mg (500mg + 125mg)",
+    "brand_name": null,
+    "generic_name": "Amoxycillin and Potassium Clavulanate",
+    "ingredients": [
+      {
+        "name": "Amoxycillin and Potassium Clavulanate",
+        "strength": "500mg + 125mg"
+      }
+    ],
+    "composition": "Amoxycillin and Potassium Clavulanate 500mg + 125mg",
+    "strength": "500mg + 125mg",
+    "dosage_form": "Tablet",
+    "dosage_category": "solid_oral",
+    "route": "oral",
+    "pack_size": "6's",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H1",
+    "mrp_inr": 51.5,
+    "group_name": "Antibiotics / Anti-Infective",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "39",
+      "retrieved_at": "2026-10-12T14:07:41.872853Z",
+      "raw_source_record": {
+        "drug_code": "39",
+        "generic_name": "Amoxycillin and Potassium Clavulanate Tablets IP 625 mg (500mg + 125mg)",
+        "unit_size": "6's",
+        "mrp_inr": 51.5,
+        "group_name": "Antibiotics / Anti-Infective",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.873372Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_44",
+    "natural_key": "amoxycillin_250_mg_capsule",
+    "name": "Amoxycillin Capsules IP 250 mg",
+    "brand_name": null,
+    "generic_name": "Amoxycillin",
+    "ingredients": [
+      {
+        "name": "Amoxycillin",
+        "strength": "250 mg"
+      }
+    ],
+    "composition": "Amoxycillin 250 mg",
+    "strength": "250 mg",
+    "dosage_form": "Capsule",
+    "dosage_category": "solid_oral",
+    "route": "oral",
+    "pack_size": "10's",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H1",
+    "mrp_inr": 14.99,
+    "group_name": "Antibiotics / Anti-Infective",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "44",
+      "retrieved_at": "2026-10-12T14:07:41.873372Z",
+      "raw_source_record": {
+        "drug_code": "44",
+        "generic_name": "Amoxycillin Capsules IP 250 mg",
+        "unit_size": "10's",
+        "mrp_inr": 14.99,
+        "group_name": "Antibiotics / Anti-Infective",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.873372Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_45",
+    "natural_key": "amoxycillin_500_mg_capsule",
+    "name": "Amoxycillin Capsules IP 500 mg",
+    "brand_name": null,
+    "generic_name": "Amoxycillin",
+    "ingredients": [
+      {
+        "name": "Amoxycillin",
+        "strength": "500 mg"
+      }
+    ],
+    "composition": "Amoxycillin 500 mg",
+    "strength": "500 mg",
+    "dosage_form": "Capsule",
+    "dosage_category": "solid_oral",
+    "route": "oral",
+    "pack_size": "10's",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H1",
+    "mrp_inr": 26.25,
+    "group_name": "Antibiotics / Anti-Infective",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "45",
+      "retrieved_at": "2026-10-12T14:07:41.873372Z",
+      "raw_source_record": {
+        "drug_code": "45",
+        "generic_name": "Amoxycillin Capsules IP 500 mg",
+        "unit_size": "10's",
+        "mrp_inr": 26.25,
+        "group_name": "Antibiotics / Anti-Infective",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.873372Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_42",
+    "natural_key": "amoxycillin_125_mg_tablet",
+    "name": "Amoxycillin Kid Tablets IP 125 mg",
+    "brand_name": null,
+    "generic_name": "Amoxycillin",
+    "ingredients": [
+      {
+        "name": "Amoxycillin",
+        "strength": "125 mg"
+      }
+    ],
+    "composition": "Amoxycillin 125 mg",
+    "strength": "125 mg",
+    "dosage_form": "Tablet",
+    "dosage_category": "solid_oral",
+    "route": "oral",
+    "pack_size": "10's",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H1",
+    "mrp_inr": 8.68,
+    "group_name": "Antibiotics / Anti-Infective",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "42",
+      "retrieved_at": "2026-10-12T14:07:41.873372Z",
+      "raw_source_record": {
+        "drug_code": "42",
+        "generic_name": "Amoxycillin Kid Tablets IP 125 mg",
+        "unit_size": "10's",
+        "mrp_inr": 8.68,
+        "group_name": "Antibiotics / Anti-Infective",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.873372Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_43",
+    "natural_key": "amoxycillin_powder_for_125_mg_5ml_suspension",
+    "name": "Amoxycillin Powder for Suspension IP 125 mg / 5ml",
+    "brand_name": null,
+    "generic_name": "Amoxycillin Powder for /",
+    "ingredients": [
+      {
+        "name": "Amoxycillin Powder for /",
+        "strength": "125 mg / 5ml"
+      }
+    ],
+    "composition": "Amoxycillin Powder for / 125 mg / 5ml",
+    "strength": "125 mg / 5ml",
+    "dosage_form": "Suspension",
+    "dosage_category": "liquid_oral",
+    "route": "oral",
+    "pack_size": "60 ml",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H1",
+    "mrp_inr": 14.84,
+    "group_name": "Antibiotics / Anti-Infective",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "43",
+      "retrieved_at": "2026-10-12T14:07:41.873372Z",
+      "raw_source_record": {
+        "drug_code": "43",
+        "generic_name": "Amoxycillin Powder for Suspension IP 125 mg / 5ml",
+        "unit_size": "60 ml",
+        "mrp_inr": 14.84,
+        "group_name": "Antibiotics / Anti-Infective",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.873372Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_1742",
+    "natural_key": "paracetamol_per_1_gm_infusion",
+    "name": "Paracetamol Infusion IP 1 gm per 100 ml",
+    "brand_name": null,
+    "generic_name": "Paracetamol per",
+    "ingredients": [
+      {
+        "name": "Paracetamol per",
+        "strength": "1 gm"
+      }
+    ],
+    "composition": "Paracetamol per 1 gm",
+    "strength": "1 gm",
+    "dosage_form": "Infusion",
+    "dosage_category": "parenteral",
+    "route": "injection",
+    "pack_size": "100 ml",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H",
+    "mrp_inr": 50.0,
+    "group_name": "Analgesics / Antipyretic",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "1742",
+      "retrieved_at": "2026-10-12T14:07:41.873372Z",
+      "raw_source_record": {
+        "drug_code": "1742",
+        "generic_name": "Paracetamol Infusion IP 1 gm per 100 ml",
+        "unit_size": "100 ml",
+        "mrp_inr": 50.0,
+        "group_name": "Analgesics / Antipyretic",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.873372Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_341",
+    "natural_key": "carboxymethylcellulose_sodium_0_5_w_v_eye_drops",
+    "name": "Carboxymethylcellulose Sodium Eye Drops IP 0.5% w/v",
+    "brand_name": null,
+    "generic_name": "Carboxymethylcellulose Sodium",
+    "ingredients": [
+      {
+        "name": "Carboxymethylcellulose Sodium",
+        "strength": "0.5% w/v"
+      }
+    ],
+    "composition": "Carboxymethylcellulose Sodium 0.5% w/v",
+    "strength": "0.5% w/v",
+    "dosage_form": "Eye Drops",
+    "dosage_category": "ophthalmic",
+    "route": "ophthalmic",
+    "pack_size": "10 ml",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H",
+    "mrp_inr": 35.0,
+    "group_name": "Ophthalmic",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "341",
+      "retrieved_at": "2026-10-12T14:07:41.873883Z",
+      "raw_source_record": {
+        "drug_code": "341",
+        "generic_name": "Carboxymethylcellulose Sodium Eye Drops IP 0.5% w/v",
+        "unit_size": "10 ml",
+        "mrp_inr": 35.0,
+        "group_name": "Ophthalmic",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.873883Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_344",
+    "natural_key": "ciprofloxacin_0_3_w_v_eye_drops",
+    "name": "Ciprofloxacin Eye Drops IP 0.3% w/v",
+    "brand_name": null,
+    "generic_name": "Ciprofloxacin",
+    "ingredients": [
+      {
+        "name": "Ciprofloxacin",
+        "strength": "0.3% w/v"
+      }
+    ],
+    "composition": "Ciprofloxacin 0.3% w/v",
+    "strength": "0.3% w/v",
+    "dosage_form": "Eye Drops",
+    "dosage_category": "ophthalmic",
+    "route": "ophthalmic",
+    "pack_size": "5 ml",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H1",
+    "mrp_inr": 11.0,
+    "group_name": "Ophthalmic",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "344",
+      "retrieved_at": "2026-10-12T14:07:41.873883Z",
+      "raw_source_record": {
+        "drug_code": "344",
+        "generic_name": "Ciprofloxacin Eye Drops IP 0.3% w/v",
+        "unit_size": "5 ml",
+        "mrp_inr": 11.0,
+        "group_name": "Ophthalmic",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.873883Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_125",
+    "natural_key": "povidone_iodine_5_w_w_ointment",
+    "name": "Povidone Iodine Ointment IP 5% w/w",
+    "brand_name": null,
+    "generic_name": "Povidone Iodine",
+    "ingredients": [
+      {
+        "name": "Povidone Iodine",
+        "strength": "5% w/w"
+      }
+    ],
+    "composition": "Povidone Iodine 5% w/w",
+    "strength": "5% w/w",
+    "dosage_form": "Ointment",
+    "dosage_category": "topical",
+    "route": "topical",
+    "pack_size": "15 gm",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": false,
+    "regulatory_schedule": "Schedule H",
+    "mrp_inr": 18.0,
+    "group_name": "Dermatological / Antiseptic",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "125",
+      "retrieved_at": "2026-10-12T14:07:41.873883Z",
+      "raw_source_record": {
+        "drug_code": "125",
+        "generic_name": "Povidone Iodine Ointment IP 5% w/w",
+        "unit_size": "15 gm",
+        "mrp_inr": 18.0,
+        "group_name": "Dermatological / Antiseptic",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.873883Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_463",
+    "natural_key": "mupirocin_2_w_w_ointment",
+    "name": "Mupirocin Ointment IP 2% w/w",
+    "brand_name": null,
+    "generic_name": "Mupirocin",
+    "ingredients": [
+      {
+        "name": "Mupirocin",
+        "strength": "2% w/w"
+      }
+    ],
+    "composition": "Mupirocin 2% w/w",
+    "strength": "2% w/w",
+    "dosage_form": "Ointment",
+    "dosage_category": "topical",
+    "route": "topical",
+    "pack_size": "5 gm",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H",
+    "mrp_inr": 48.0,
+    "group_name": "Dermatological / Antibacterial",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "463",
+      "retrieved_at": "2026-10-12T14:07:41.873883Z",
+      "raw_source_record": {
+        "drug_code": "463",
+        "generic_name": "Mupirocin Ointment IP 2% w/w",
+        "unit_size": "5 gm",
+        "mrp_inr": 48.0,
+        "group_name": "Dermatological / Antibacterial",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.873883Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_118",
+    "natural_key": "clobetasol_propionate_0_05_w_w_cream",
+    "name": "Clobetasol Propionate Cream IP 0.05% w/w",
+    "brand_name": null,
+    "generic_name": "Clobetasol Propionate",
+    "ingredients": [
+      {
+        "name": "Clobetasol Propionate",
+        "strength": "0.05% w/w"
+      }
+    ],
+    "composition": "Clobetasol Propionate 0.05% w/w",
+    "strength": "0.05% w/w",
+    "dosage_form": "Cream",
+    "dosage_category": "topical",
+    "route": "topical",
+    "pack_size": "15 gm",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H",
+    "mrp_inr": 20.0,
+    "group_name": "Dermatological / Steroid",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "118",
+      "retrieved_at": "2026-10-12T14:07:41.874214Z",
+      "raw_source_record": {
+        "drug_code": "118",
+        "generic_name": "Clobetasol Propionate Cream IP 0.05% w/w",
+        "unit_size": "15 gm",
+        "mrp_inr": 20.0,
+        "group_name": "Dermatological / Steroid",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.874214Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_120",
+    "natural_key": "fusidic_acid_2_w_v_cream",
+    "name": "Fusidic Acid Cream IP 2% w/v",
+    "brand_name": null,
+    "generic_name": "Fusidic Acid",
+    "ingredients": [
+      {
+        "name": "Fusidic Acid",
+        "strength": "2% w/v"
+      }
+    ],
+    "composition": "Fusidic Acid 2% w/v",
+    "strength": "2% w/v",
+    "dosage_form": "Cream",
+    "dosage_category": "topical",
+    "route": "topical",
+    "pack_size": "10 gm",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H",
+    "mrp_inr": 32.0,
+    "group_name": "Dermatological / Antibacterial",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "120",
+      "retrieved_at": "2026-10-12T14:07:41.874214Z",
+      "raw_source_record": {
+        "drug_code": "120",
+        "generic_name": "Fusidic Acid Cream IP 2% w/v",
+        "unit_size": "10 gm",
+        "mrp_inr": 32.0,
+        "group_name": "Dermatological / Antibacterial",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.874214Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_944",
+    "natural_key": "levosalbutamol_50mcg_inhaler",
+    "name": "Levosalbutamol Inhaler 50mcg",
+    "brand_name": null,
+    "generic_name": "Levosalbutamol",
+    "ingredients": [
+      {
+        "name": "Levosalbutamol",
+        "strength": "50mcg"
+      }
+    ],
+    "composition": "Levosalbutamol 50mcg",
+    "strength": "50mcg",
+    "dosage_form": "Inhaler",
+    "dosage_category": "respiratory",
+    "route": "inhalation",
+    "pack_size": "200 MDI",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H",
+    "mrp_inr": 95.0,
+    "group_name": "Respiratory",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "944",
+      "retrieved_at": "2026-10-12T14:07:41.874214Z",
+      "raw_source_record": {
+        "drug_code": "944",
+        "generic_name": "Levosalbutamol Inhaler 50mcg",
+        "unit_size": "200 MDI",
+        "mrp_inr": 95.0,
+        "group_name": "Respiratory",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.874214Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  },
+  {
+    "id": "med_in_pmbi_568",
+    "natural_key": "salmeterol_and_fluticasone_propionate_25mcg_250mcg_inhaler",
+    "name": "Salmeterol and Fluticasone Propionate Inhaler IP (25mcg + 250mcg)",
+    "brand_name": null,
+    "generic_name": "Salmeterol and Fluticasone Propionate",
+    "ingredients": [
+      {
+        "name": "Salmeterol and Fluticasone Propionate",
+        "strength": "25mcg + 250mcg"
+      }
+    ],
+    "composition": "Salmeterol and Fluticasone Propionate 25mcg + 250mcg",
+    "strength": "25mcg + 250mcg",
+    "dosage_form": "Inhaler",
+    "dosage_category": "respiratory",
+    "route": "inhalation",
+    "pack_size": "120 MDI",
+    "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "classification": "Generic",
+    "overview": "Generic formulation listed under the national Jan Aushadhi healthcare initiative.",
+    "common_uses": [],
+    "side_effects": [],
+    "precautions": [],
+    "contraindications": [],
+    "drug_interactions": [],
+    "storage_info": "Store in original packaging under recommended conditions.",
+    "is_prescription_required": true,
+    "regulatory_schedule": "Schedule H",
+    "mrp_inr": 180.0,
+    "group_name": "Respiratory",
+    "source_metadata": {
+      "source_name": "PMBI_JAN_AUSHADHI",
+      "source_url": "https://www.pmbi.co.in/ProductList.aspx",
+      "source_record_id": "568",
+      "retrieved_at": "2026-10-12T14:07:41.874214Z",
+      "raw_source_record": {
+        "drug_code": "568",
+        "generic_name": "Salmeterol and Fluticasone Propionate Inhaler IP (25mcg + 250mcg)",
+        "unit_size": "120 MDI",
+        "mrp_inr": 180.0,
+        "group_name": "Respiratory",
+        "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+      }
+    },
+    "identity_verification": {
+      "status": "source_confirmed",
+      "scope": "Drug Code & packaging confirmed via official PMBI product catalogue.",
+      "evidence": "PMBI Official Product and MRP List (Department of Pharmaceuticals, Govt of India)",
+      "verified_at": "2026-10-12T14:07:41.874214Z"
+    },
+    "clinical_verification": {
+      "status": "unverified",
+      "scope": "Raw imported product record. Clinical claims, contraindications, and drug interactions have not yet been linked to an approved pharmacopoeia or doctor review.",
+      "clinical_reviewer": null,
+      "last_reviewed_date": null
+    }
+  }
+]

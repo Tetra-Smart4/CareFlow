@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-10-12T14:07:41.874729Z",
+  "source_name": "PMBI_JAN_AUSHADHI",
+  "total_raw_records_processed": 17,
+  "valid_unique_records_staged": 16,
+  "duplicate_records_detected": 1,
+  "dosage_forms_breakdown": {
+    "Tablet": 4,
+    "Capsule": 2,
+    "Suspension": 1,
+    "Infusion": 1,
+    "Eye Drops": 2,
+    "Ointment": 2,
+    "Cream": 2,
+    "Inhaler": 2
+  },
+  "identity_verification_breakdown": {
+    "source_confirmed": 16,
+    "unverified": 0
+  },
+  "clinical_verification_breakdown": {
+    "unverified": 16,
+    "clinically_reviewed": 0
+  },
+  "safety_compliance_check": {
+    "unverified_clinical_claims_quarantined": true,
+    "raw_source_records_preserved": true,
+    "service_role_credentials_used": false
+  },
+  "duplicates_list": [
+    {
+      "duplicate_natural_key": "metformin_hydrochloride_500_mg_tablet",
+      "primary_drug_code": "145",
+      "duplicate_drug_code": "145",
+      "raw_name": "Metformin Hydrochloride Tablets IP 500 mg (Duplicate Batch Entry)"
+    }
+  ]
+}

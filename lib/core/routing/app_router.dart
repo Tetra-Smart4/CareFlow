@@ -173,6 +173,8 @@ import 'package:careflow/screens/shared/notifications/notifications_screen.dart'
 import 'package:careflow/screens/shared/patient_journey/patient_journey_screen.dart';
 import 'package:careflow/screens/shared/pdf/pdf_screen.dart';
 import 'package:careflow/screens/shared/messages/messages_screen.dart';
+import 'package:careflow/screens/shared/medicine/medicine_search_screen.dart';
+import 'package:careflow/screens/patient/symptom_guidance/symptom_guidance_screen.dart';
 
 // ============================================================
 // STAFF
@@ -268,6 +270,7 @@ class AppRouter {
 
     '/patient/records/detail': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: RecordDetailsScreen()),
     '/patient/medical-history/questionnaire': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: MedicalQuestionnaireScreen()),
+    '/patient/symptom-guidance': (_) => const AuthGuardWidget(allowedRoles: ['patient', 'doctor', 'clinic', 'admin', 'staff', 'family'], child: SymptomGuidanceScreen()),
 
     // Reports
     '/patient/reports': (_) => const AuthGuardWidget(allowedRoles: ['patient'], child: PatientReportsScreen()),
@@ -465,6 +468,7 @@ class AppRouter {
     // ==========================================================
 
     '/shared/search': (_) => const AuthGuardWidget(allowedRoles: ['patient', 'doctor', 'clinic', 'admin', 'staff', 'family', 'platform_admin'], child: SearchScreen()),
+    '/shared/medicine/search': (_) => const AuthGuardWidget(allowedRoles: ['patient', 'doctor', 'clinic', 'admin', 'staff', 'family', 'platform_admin'], child: MedicineSearchScreen()),
 
     '/shared/notifications': (_) => const AuthGuardWidget(allowedRoles: ['patient', 'doctor', 'clinic', 'admin', 'staff', 'family', 'platform_admin'], child: NotificationsScreen()),
 

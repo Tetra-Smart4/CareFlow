@@ -15,6 +15,8 @@ import '../queue/live_queue_screen.dart';
 import '../medical_records/medical_records_screen.dart';
 import '../profile/patient_profile_screen.dart';
 import '../../../widgets/common/careflow_feature_icon.dart';
+import '../../../widgets/common/careflow_brand_title.dart';
+import '../../../widgets/medicine/medicine_search_bar_card.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 class PatientDashboard extends StatefulWidget {
@@ -274,6 +276,16 @@ class _PatientHomeTabState extends State<PatientHomeTab> {
                   delegate: SliverChildListDelegate(
 
                     [
+                      const MedicineSearchBarCard(role: MedicineCardRole.patient)
+                          .animate()
+                          .fade(duration: 400.ms)
+                          .slideY(begin: 0.1, duration: 400.ms),
+                      const SizedBox(height: 12),
+                      _buildPatientMedicineShortcuts()
+                          .animate()
+                          .fade(duration: 400.ms, delay: 50.ms)
+                          .slideY(begin: 0.1, duration: 400.ms),
+                      const SizedBox(height: 18),
                       _buildAppointmentCard().animate().fade(duration: 400.ms).slideY(begin: 0.1, duration: 400.ms),
                       const SizedBox(height: 18),
                       _buildQuickActions().animate().fade(duration: 400.ms, delay: 100.ms).slideY(begin: 0.1, duration: 400.ms),
@@ -305,159 +317,246 @@ class _PatientHomeTabState extends State<PatientHomeTab> {
   }
 
   Widget _buildHeader() {
-
     return Container(
-
-      padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
-
+      padding: const EdgeInsets.fromLTRB(20, 14, 20, 16),
       decoration: const BoxDecoration(
-
         color: AppColors.white,
-
         border: Border(
-
           bottom: BorderSide(
-
             color: AppColors.border,
-
             width: 0.7,
-
           ),
-
         ),
-
       ),
-
-      child: Row(
-
+      child: Column(
         children: [
-
-          _buildProfileAvatar(),
-
-          const SizedBox(width: 12),
-
-          Expanded(
-
-            child: _loading
-
-                ? Column(
-
-                    crossAxisAlignment: CrossAxisAlignment.start,
-
-                    children: [
-
-                      _shimmerLine(width: 110, height: 12),
-
-                      const SizedBox(height: 7),
-
-                      _shimmerLine(width: 160, height: 18),
-
-                    ],
-
-                  )
-
-                : Column(
-
-                    crossAxisAlignment: CrossAxisAlignment.start,
-
-                    children: [
-
-                      Text(
-
-                        'Welcome back',
-
-                        style: TextStyle(
-
-                          color: AppColors.textSecondary,
-
-                          fontSize: 12,
-
-                          fontWeight: FontWeight.w500,
-
-                        ),
-
-                      ),
-
-                      const SizedBox(height: 2),
-
-                      Text(
-
-                        _firstName,
-
-                        maxLines: 1,
-
-                        overflow: TextOverflow.ellipsis,
-
-                        style: const TextStyle(
-
-                          color: AppColors.textPrimary,
-
-                          fontSize: 20,
-
-                          fontWeight: FontWeight.w700,
-
-                        ),
-
-                      ),
-
-                    ],
-
-                  ),
-
-          ),
-
-          Stack(
-            clipBehavior: Clip.none,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _buildHeaderButton(
-                icon: Icons.notifications_none_rounded,
-                onTap: () => _open('/patient/notifications'),
-              ),
-              if (_unreadNotifications > 0)
-                Positioned(
-                  top: -2,
-                  right: -2,
-                  child: Container(
-                    padding: const EdgeInsets.all(4),
-                    decoration: const BoxDecoration(
-                      color: ColorTokens.error,
-                      shape: BoxShape.circle,
-                    ),
-                    constraints: const BoxConstraints(minWidth: 18, minHeight: 18),
-                    child: Center(
-                      child: Text(
-                        _unreadNotifications > 99 ? '99+' : '$_unreadNotifications',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 9,
-                          fontWeight: FontWeight.w700,
-                        ),
+              const CareFlowBrandTitle(),
+              Row(
+                children: [
+                  Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      _buildHeaderButton(
+                        icon: Icons.notifications_none_rounded,
+                        onTap: () => _open('/patient/notifications'),
                       ),
-                    ),
+                      if (_unreadNotifications > 0)
+                        Positioned(
+                          top: -2,
+                          right: -2,
+                          child: Container(
+                            padding: const EdgeInsets.all(4),
+                            decoration: const BoxDecoration(
+                              color: ColorTokens.error,
+                              shape: BoxShape.circle,
+                            ),
+                            constraints: const BoxConstraints(minWidth: 18, minHeight: 18),
+                            child: Center(
+                              child: Text(
+                                _unreadNotifications > 99 ? '99+' : '$_unreadNotifications',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 9,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
                   ),
-                ),
+                  const SizedBox(width: 8),
+                  _buildHeaderButton(
+                    icon: Icons.person_outline_rounded,
+                    onTap: () => _open('/patient/profile'),
+                  ),
+                ],
+              ),
             ],
           ),
-
-          const SizedBox(width: 8),
-
-          _buildHeaderButton(
-
-            icon: Icons.person_outline_rounded,
-
-            onTap: () => _open('/patient/profile'),
-
+          const SizedBox(height: 14),
+          Row(
+            children: [
+              _buildProfileAvatar(),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _loading
+                    ? Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          _shimmerLine(width: 110, height: 12),
+                          const SizedBox(height: 7),
+                          _shimmerLine(width: 160, height: 18),
+                        ],
+                      )
+                    : Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Welcome back,',
+                            style: TextStyle(
+                              color: AppColors.textSecondary,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            _firstName,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              color: AppColors.textPrimary,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
+                      ),
+              ),
+            ],
           ),
-
         ],
-
       ),
-
     );
-
   }
 
-
+  Widget _buildPatientMedicineShortcuts() {
+    return Row(
+      children: [
+        Expanded(
+          child: InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: () => Navigator.pushNamed(context, '/patient/symptom-guidance'),
+            child: Container(
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: ColorTokens.border),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.03),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 38,
+                    height: 38,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF0D9488).withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Icon(Icons.health_and_safety_rounded, color: Color(0xFF0D9488), size: 20),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Symptom Guidance',
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w800,
+                            color: ColorTokens.darkNavy,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        SizedBox(height: 2),
+                        Text(
+                          'Triage & red flags',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w500,
+                            color: ColorTokens.textSecondary,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: () => Navigator.pushNamed(context, '/patient/prescriptions'),
+            child: Container(
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: ColorTokens.border),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.03),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 38,
+                    height: 38,
+                    decoration: BoxDecoration(
+                      color: ColorTokens.lightBlue,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Icon(Icons.receipt_long_rounded, color: ColorTokens.primaryBlue, size: 20),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'My Prescriptions',
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w800,
+                            color: ColorTokens.darkNavy,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        SizedBox(height: 2),
+                        Text(
+                          'View active Rx',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w500,
+                            color: ColorTokens.textSecondary,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 
   Widget _buildProfileAvatar() {
 

@@ -1,0 +1,138 @@
+[
+  {
+    "drug_code": "145",
+    "generic_name": "Metformin Hydrochloride Tablets IP 500 mg",
+    "unit_size": "10's",
+    "mrp_inr": 6.60,
+    "group_name": "Anti-Diabetic",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "144",
+    "generic_name": "Metformin Hydrochloride Sustained/Prolonged Release Tablets IP 1000 mg",
+    "unit_size": "10's",
+    "mrp_inr": 12.00,
+    "group_name": "Anti-Diabetic",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "39",
+    "generic_name": "Amoxycillin and Potassium Clavulanate Tablets IP 625 mg (500mg + 125mg)",
+    "unit_size": "6's",
+    "mrp_inr": 51.50,
+    "group_name": "Antibiotics / Anti-Infective",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "44",
+    "generic_name": "Amoxycillin Capsules IP 250 mg",
+    "unit_size": "10's",
+    "mrp_inr": 14.99,
+    "group_name": "Antibiotics / Anti-Infective",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "45",
+    "generic_name": "Amoxycillin Capsules IP 500 mg",
+    "unit_size": "10's",
+    "mrp_inr": 26.25,
+    "group_name": "Antibiotics / Anti-Infective",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "42",
+    "generic_name": "Amoxycillin Kid Tablets IP 125 mg",
+    "unit_size": "10's",
+    "mrp_inr": 8.68,
+    "group_name": "Antibiotics / Anti-Infective",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "43",
+    "generic_name": "Amoxycillin Powder for Suspension IP 125 mg / 5ml",
+    "unit_size": "60 ml",
+    "mrp_inr": 14.84,
+    "group_name": "Antibiotics / Anti-Infective",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "1742",
+    "generic_name": "Paracetamol Infusion IP 1 gm per 100 ml",
+    "unit_size": "100 ml",
+    "mrp_inr": 50.00,
+    "group_name": "Analgesics / Antipyretic",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "341",
+    "generic_name": "Carboxymethylcellulose Sodium Eye Drops IP 0.5% w/v",
+    "unit_size": "10 ml",
+    "mrp_inr": 35.00,
+    "group_name": "Ophthalmic",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "344",
+    "generic_name": "Ciprofloxacin Eye Drops IP 0.3% w/v",
+    "unit_size": "5 ml",
+    "mrp_inr": 11.00,
+    "group_name": "Ophthalmic",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "125",
+    "generic_name": "Povidone Iodine Ointment IP 5% w/w",
+    "unit_size": "15 gm",
+    "mrp_inr": 18.00,
+    "group_name": "Dermatological / Antiseptic",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "463",
+    "generic_name": "Mupirocin Ointment IP 2% w/w",
+    "unit_size": "5 gm",
+    "mrp_inr": 48.00,
+    "group_name": "Dermatological / Antibacterial",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "118",
+    "generic_name": "Clobetasol Propionate Cream IP 0.05% w/w",
+    "unit_size": "15 gm",
+    "mrp_inr": 20.00,
+    "group_name": "Dermatological / Steroid",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "120",
+    "generic_name": "Fusidic Acid Cream IP 2% w/v",
+    "unit_size": "10 gm",
+    "mrp_inr": 32.00,
+    "group_name": "Dermatological / Antibacterial",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "944",
+    "generic_name": "Levosalbutamol Inhaler 50mcg",
+    "unit_size": "200 MDI",
+    "mrp_inr": 95.00,
+    "group_name": "Respiratory",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "568",
+    "generic_name": "Salmeterol and Fluticasone Propionate Inhaler IP (25mcg + 250mcg)",
+    "unit_size": "120 MDI",
+    "mrp_inr": 180.00,
+    "group_name": "Respiratory",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  },
+  {
+    "drug_code": "145",
+    "generic_name": "Metformin Hydrochloride Tablets IP 500 mg (Duplicate Batch Entry)",
+    "unit_size": "10's",
+    "mrp_inr": 6.60,
+    "group_name": "Anti-Diabetic",
+    "source_url": "https://www.pmbi.co.in/ProductList.aspx"
+  }
+]

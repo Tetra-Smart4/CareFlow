@@ -7,6 +7,7 @@ import 'package:careflow/services/auth_service.dart';
 import 'package:careflow/services/realtime_service.dart';
 import 'package:careflow/widgets/common/module_card.dart';
 import 'package:careflow/widgets/common/careflow_brand_title.dart';
+import 'package:careflow/widgets/medicine/medicine_search_bar_card.dart';
 import '../appointments/doctor_appointments_screen.dart';
 import '../queue/doctor_queue_screen.dart';
 import '../patients/patient_list_screen.dart';
@@ -359,6 +360,11 @@ class _DoctorHomeTabState extends State<DoctorHomeTab> {
             'Connected care, organized for today.',
             style: TextStyle(color: ColorTokens.muted),
           ),
+          const SizedBox(height: 16),
+          const MedicineSearchBarCard(role: MedicineCardRole.doctor)
+              .animate()
+              .fade(duration: 400.ms)
+              .slideY(begin: 0.1, duration: 400.ms),
           const SizedBox(height: 16),
           if (_loading)
             const Center(
